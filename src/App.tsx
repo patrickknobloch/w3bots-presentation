@@ -1,4 +1,4 @@
-import React, { useState, ReactNode } from 'react';
+import React, { useState, ReactNode, useEffect } from 'react';
 import { AlertCircle, BookOpen, Bolt, Coins, ChevronRight, Globe, RefreshCw, Briefcase, Users, DollarSign } from 'lucide-react';
 import Card from './lib/components/Card';
 import CardContent from './lib/components/CardContent';
@@ -18,9 +18,9 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({ title, children }) => (
-  <Card className="w-full mb-6">
-    <CardHeader>
-      <CardTitle className="text-xl">{title}</CardTitle>
+  <Card className="w-full mb-6 ">
+    <CardHeader className='dark:border-neutral-800'>
+      <CardTitle className="text-2xl ">{title}</CardTitle>
     </CardHeader>
     <CardContent>{children}</CardContent>
   </Card>
@@ -35,12 +35,36 @@ const LanguageToggle: React.FC<LanguageToggleProps> = ({ language, setLanguage }
   <Button 
     variant="outline" 
     onClick={() => setLanguage(language === 'de' ? 'en' : 'de')}
-    className="fixed top-4 right-4 flex items-center gap-2 bg-white shadow-md p-3 rounded-full"
+    className="fixed top-4 right-4 flex items-center gap-2 bg-white dark:text-neutral-900 shadow-md p-3 rounded-full"
   >
     <Globe className="w-5 h-5" />
     <span className="font-medium">{language.toUpperCase()}</span>
   </Button>
 );
+
+interface ThemeToggleProps {
+  theme: 'light' | 'dark';
+  setTheme: React.Dispatch<React.SetStateAction<'light' | 'dark'>>;
+}
+
+const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, setTheme }) => (
+  <Button
+    variant="outline"
+    onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+    className="fixed bottom-4 right-4 flex items-center gap-2 dark:text-neutral-900  bg-white shadow-md p-3 rounded-full"
+  >
+    {theme === 'light' ? (
+      <>
+        <span className="font-medium">Dark Mode</span>
+      </>
+    ) : (
+      <>
+        <span className="font-medium">Light Mode</span>
+      </>
+    )}
+  </Button>
+);
+
 
 interface RevenueModelProps {
   title: string;
@@ -49,7 +73,7 @@ interface RevenueModelProps {
 }
 
 const RevenueModel: React.FC<RevenueModelProps> = ({ title, items, icon: Icon }) => (
-  <Card className="w-full h-full shadow-none p-3">
+  <Card className="w-full h-full shadow-none p-3 ">
     <CardContent className="pt-6 ">
       <div className="flex items-center gap-2 mb-3">
         <Icon className="w-5 h-5 text-neutral-500" />
@@ -57,7 +81,7 @@ const RevenueModel: React.FC<RevenueModelProps> = ({ title, items, icon: Icon })
       </div>
       <ul className="space-y-2">
         {items.map((item, index) => (
-          <li key={index} className="flex items-center gap-2 text-sm text-gray-600">
+          <li key={index} className="flex items-center gap-2 text-sm ">
             <ChevronRight className="w-4 h-4 text-neutral-500" />
             {item}
           </li>
@@ -76,9 +100,9 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ title, status, icon: Icon, features, revenue }) => (
-  <Card className="w-full h-full shadow-none p-3">
-    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-      <CardTitle className="text-lg font-bold flex items-center gap-2">
+  <Card className="w-full h-full shadow-none p-3 ">
+    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 border-none">
+      <CardTitle className="text-lg font-bold flex items-center gap-2 ">
         <Icon className="w-5 h-5" />
         {title}
       </CardTitle>
@@ -98,7 +122,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, status, icon: Icon, fe
           <h4 className="font-medium mb-2">Features</h4>
           <ul className="list-disc pl-5 space-y-1">
             {features.map((feature, idx) => (
-              <li key={idx} className="text-sm text-gray-600">{feature}</li>
+              <li key={idx} className="text-sm ">{feature}</li>
             ))}
           </ul>
         </div>
@@ -108,7 +132,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, status, icon: Icon, fe
           </h4>
           <ul className="list-disc pl-5 space-y-1">
             {revenue.map((rev, idx) => (
-              <li key={idx} className="text-sm text-gray-600">{rev}</li>
+              <li key={idx} className="text-sm ">{rev}</li>
             ))}
           </ul>
         </div>
@@ -128,7 +152,7 @@ const AdvisorCard: React.FC<AdvisorCardProps> = ({ name, role, description }) =>
     <CardContent className="pt-6">
       <h4 className="font-bold">{name}</h4>
       <Badge variant="outline" className="mt-1 mb-2">{role}</Badge>
-      <p className="text-sm text-gray-600">{description}</p>
+      <p className="text-sm ">{description}</p>
     </CardContent>
   </Card>
 );
@@ -145,13 +169,24 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name, role, description
     <CardContent className="pt-6">
       <img src={photo} alt={name} className="w-full h-40 object-cover rounded-lg mb-4" />
       <h4 className="font-bold">{name}</h4>
-      <Badge variant="outline" className="mt-1 mb-2">{role}</Badge>
-      <p className="text-sm text-gray-600">{description}</p>
+      <Badge className="mt-1 mb-2 ">{role}</Badge>
+      <p className="text-sm ">{description}</p>
     </CardContent>
   </Card>
 );
 
 export default function W3BotsPresentation() {
+
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  useEffect(() => {
+    document.documentElement.className = theme;  // Setze das HTML-Element entsprechend dem Thema
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
   const [language, setLanguage] = useState<'de' | 'en'>('de');
 
   interface PainPointProps {
@@ -161,11 +196,11 @@ export default function W3BotsPresentation() {
   }
   
   const PainPoint: React.FC<PainPointProps> = ({ icon: Icon, title, description }) => (
-    <div className="flex gap-4 p-4 rounded-lg border border-red-100 bg-red-50">
+    <div className="flex gap-4 p-4 rounded-lg border dark:border-red-500/10 bg-red-100 dark:bg-red-500/5">
       <Icon className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
       <div>
         <h4 className="font-bold">{title}</h4>
-        <p className="text-gray-600">{description}</p>
+        <p className="">{description}</p>
       </div>
     </div>
   );
@@ -177,11 +212,11 @@ export default function W3BotsPresentation() {
   }
   
   const Solution: React.FC<SolutionProps> = ({ icon: Icon, title, description }) => (
-    <div className="flex gap-4 p-4 rounded-lg border border-green-100 bg-green-50">
+    <div className="flex gap-4 p-4 rounded-lg border border-green-100 dark:border-green-300/20 bg-green-50 dark:bg-green-300/10">
       <Icon className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
       <div>
         <h4 className="font-bold">{title}</h4>
-        <p className="text-gray-600">{description}</p>
+        <p className="">{description}</p>
       </div>
     </div>
   );
@@ -197,11 +232,11 @@ export default function W3BotsPresentation() {
         <CardContent className="pt-6">
           <h4 className="font-bold text-lg mb-4">{letter.title}</h4>
         
-          <p className="mb-4 text-gray-700">{letter.introduction}</p>
+          <p className="mb-4 ">{letter.introduction}</p>
           {letter.content.map((paragraph, index) => (
-            <p key={index} className="mb-4 text-gray-700">{paragraph}</p>
+            <p key={index} className="mb-4 ">{paragraph}</p>
           ))}
-          <p className="font-semibold text-gray-700">{letter.closing}</p>
+          <p className="font-semibold ">{letter.closing}</p>
         </CardContent>
       </Card>
     );
@@ -662,10 +697,11 @@ export default function W3BotsPresentation() {
 
 
   return (
-    <ScrollArea className="h-full p-3 md:p-0 pb-6">
+    <ScrollArea className="h-full p-3 md:p-0 pb-6 bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-300/10 via-blue-950/0 to-slate-950/0">
       <div className="w-full max-w-6xl mx-auto space-y-8">
         <LanguageToggle language={language} setLanguage={setLanguage} />
-        
+        <ThemeToggle theme={theme} setTheme={setTheme} />
+
         <div className="w-full flex items-center justify-items-center flex-col space-y-4 mb-12">
           
           <svg className='block mt-2 w-1/2 -ml-2 md:w-1/3 fill-slate-900' viewBox="0 0 4346 1023" xmlns="http://www.w3.org/2000/svg">
@@ -741,7 +777,7 @@ export default function W3BotsPresentation() {
               </defs>
           </svg>
 
-          <p className="text-xl text-center px-6 text-gray-600">
+          <p className="text-xl text-center px-6 ">
             {language === 'de' 
               ? "Techstars Web3 Accelerator Bewerbung 2024"
               : "Techstars Web3 Accelerator Application 2024"
@@ -775,13 +811,13 @@ export default function W3BotsPresentation() {
         </Section>
 
         <Section title={language === 'de' ? "Produkte" : "Products"}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {products.map((product) => (
               <ProductCard key={product.title} {...product} />
             ))}
           </div>
         </Section>
-
+        
         <Section title={language === 'de' ? "Erlösströme" : "Revenue Streams"}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {revenueStreams.map((stream) => (
@@ -798,7 +834,7 @@ export default function W3BotsPresentation() {
               </h3>
               <ul className="list-disc pl-5 space-y-2">
                 {team.highlights.map((highlight, idx) => (
-                  <li key={idx} className="text-gray-600">{highlight}</li>
+                  <li key={idx} className="">{highlight}</li>
                 ))}
               </ul>
             </div>

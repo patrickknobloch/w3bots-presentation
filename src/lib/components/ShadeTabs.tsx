@@ -61,8 +61,8 @@ interface TabsTriggerProps {
 
 export const TabsTrigger: React.FC<TabsTriggerProps> = ({ value, isSelected, onClick, children }) => (
   <button
-    className={`px-4 py-2 font-bold transition-colors ${
-      isSelected ? 'text-neutral-900 border-b-2 border-neutral-900' : 'text-gray-500'
+    className={`px-4 py-2 font-bold transition-colors rounded-lg ${
+      isSelected ? ' bg-neutral-900 dark:bg-white/5 text-white dark:text-neutral-100' : ' opacity-50'
     }`}
     onClick={() => onClick && onClick(value)}
   >
