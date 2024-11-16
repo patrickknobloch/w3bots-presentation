@@ -16,6 +16,8 @@ import audityLogo from './lib/assets/auditylogo.svg';
 import swapyLogo from './lib/assets/swapylogo.svg';
 import academyLogo from './lib/assets/acedemylogo.svg';
 import tradyLogo from './lib/assets/tradylogo.svg';
+import lootyLogo from './lib/assets/lootylogo.svg';
+import poolyLogo from './lib/assets/poolylogo.svg';
 
 import { XOctagon, CheckCircle } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './lib/components/ShadeTabs';
@@ -473,7 +475,7 @@ export default function W3BotsPresentation() {
     {
       title: "Pooly",
       status: language === 'de' ? "In der Entwicklung" : "In development",
-      image: tradyLogo,
+      image: poolyLogo,
       color:'blue',
       features: language === 'de' 
         ? [
@@ -509,7 +511,7 @@ export default function W3BotsPresentation() {
     },{
       title: "Looty",
       status: language === 'de' ? "Noch nicht begonnen" : "Not started yet",
-      image: tradyLogo,
+      image: lootyLogo,
       color:'red',
       features: language === 'de' 
         ?[

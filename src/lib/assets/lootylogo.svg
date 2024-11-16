@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 658 600" width="658" height="600">
+	<defs>
+    <radialGradient id="radial-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="100%" style="stop-color: #eab308;" />
+    </radialGradient>
+  </defs>
+	<style>
+    .s0 { fill: url(#radial-gradient); } 
+	</style>
+	<path id="Form 1" class="s0" d="m280 353v242h-219v-242z"/>
+	<path id="Form 1 copy" class="s0" d="m280 6v242h-219v-242z"/>
+	<path id="Form 1 copy 2" class="s0" d="m598 352v242h-219v-242z"/>
+</svg>
