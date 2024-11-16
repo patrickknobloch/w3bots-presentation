@@ -1,5 +1,5 @@
 import React, { useState, ReactNode, useEffect } from 'react';
-import { AlertCircle, BookOpen, Bolt, Coins, ChevronRight, Globe, RefreshCw, Briefcase, Users, DollarSign } from 'lucide-react';
+import {Moon,SunDim,Repeat,XOctagon, CheckCircle, AlertCircle, BookOpen, Bolt, Coins, ChevronRight, Globe, RefreshCw, Briefcase, Users, DollarSign } from 'lucide-react';
 import Card from './lib/components/Card';
 import CardContent from './lib/components/CardContent';
 import CardHeader from './lib/components/CardHeader';
@@ -7,7 +7,6 @@ import CardTitle from './lib/components/CardTitle';
 import Button from './lib/components/Button';
 import Badge from './lib/components/Badge';
 import ScrollArea from './lib/components/ScrollArea';
-import { Repeat } from 'lucide-react';
 
 import testPhoto from './lib/assets/image14.jpg';
 import patrickKnoblochPhoto from './lib/assets/patrick_knobloch.jpg';
@@ -19,10 +18,7 @@ import tradyLogo from './lib/assets/tradylogo.svg';
 import lootyLogo from './lib/assets/lootylogo.svg';
 import poolyLogo from './lib/assets/poolylogo.svg';
 
-import { XOctagon, CheckCircle } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './lib/components/ShadeTabs';
-import { SunDim } from 'lucide-react';
-import { Moon } from 'lucide-react';
 
 interface FeaturesRevenueProps {
   features: string[];
@@ -126,13 +122,13 @@ interface RevenueModelProps {
 }
 
 const RevenueModel: React.FC<RevenueModelProps> = ({ title, items, icon: Icon }) => (
-  <Card className="w-full h-full shadow-none p-3 bg-neutral-100/10 border border-neutral-200 dark:text-white rounded-xl dark:bg-neutral-800/10 dark:border-neutral-800">
-    <CardContent className="pt-6">
-      <div className="flex items-center gap-2 mb-6 pb-6 border-b border-neutral-800">
+  <Card className="w-full h-full shadow-none p-0 bg-neutral-100/10 border border-neutral-200 dark:text-white rounded-xl dark:bg-neutral-800/10 dark:border-neutral-800">
+    <CardContent className="pt-6 px-0">
+      <div className="flex items-center gap-2 mb-6 pb-6 px-6 border-b border-neutral-600/20">
         <Icon className="w-5 h-5 text-neutral-500" />
         <h3 className="font-bold text-xl">{title}</h3>
       </div>
-      <ul className="space-y-2">
+      <ul className="space-y-2 px-6 pb-4">
         {items.map((item, index) => (
           <li key={index} className="flex items-center gap-2 text-base ">
             <ChevronRight className="w-4 h-4 text-neutral-500" />
@@ -497,7 +493,7 @@ export default function W3BotsPresentation() {
             "Pooly vereinfacht Investitionen in Kryptowährungs-Liquiditätspools mit einem Single-Asset-Kauf und ermöglicht es Nutzern, problemlos an DeFi teilzunehmen und Belohnungen zu verdienen, ohne sich mit komplexen Paarungen auseinandersetzen zu müssen."
           ]
         : [
-            "TPooly simplifies investing in cryptocurrency liquidity pools with a single asset purchase, making it easy for users to participate in DeFi and earn rewards without the complexity of pairings."
+            "Pooly simplifies investing in cryptocurrency liquidity pools with a single asset purchase, making it easy for users to participate in DeFi and earn rewards without the complexity of pairings."
           ],
       revenue: language === 'de'
         ? [
@@ -536,15 +532,11 @@ export default function W3BotsPresentation() {
       revenue: language === 'de'
         ? [
             "Premium-API-Zugriff",
-            "Aufgabenbasierte Werbung",
-            "Telegram Kanäle/Gruppen Integration",
-            "Multichain-Unterstützung (demnächst)"
+            "Aufgabenbasierte Werbung"
           ]
           : [
             "Interactive reward system",
-            "Dynamic reward tiers",
-            "Telegram channels/groups integration",
-            "Multichain Support (soon)"
+            "Dynamic reward tiers"
         ]
       
     }
@@ -553,19 +545,17 @@ export default function W3BotsPresentation() {
   const team = {
     highlights: language === 'de'
       ? [
-          "Mint State Labs - Techstars Web3 Accelerator Alumni",
-          "Sir Anthony Hopkins NFT Collection (ausverkauft in 77 Sekunden)",
-          "AAA-Gaming Projekte (The Walking Dead, Squid Games)",
-          "Erstes dynamisches NFT-Spiel auf SUI-Blockchain",
-          "Zusammenarbeit mit Mysten Labs"
-        ]
-      : [
-          "Mint State Labs - Techstars Web3 Accelerator Alumni",
-          "Sir Anthony Hopkins NFT Collection (sold out in 77 seconds)",
-          "AAA Gaming Projects (The Walking Dead, Squid Games)",
-          "First dynamic NFT game on SUI blockchain",
-          "Collaboration with Mysten Labs"
-        ],
+        { text: "Teil von Mint State Labs - Techstars Web3 Accelerator Alumni", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
+        { text: "NFTs für Hollywood: Collections auf ETH für William Shatner, Sir Anthony Hopkins, sowie Filmen/Serien wie The Walking Dead, Vampires Diaries uvm.", link: "https://opensea.io/OrangeComet/created?search%5BsortAscending%5D=false&search%5BsortBy%5D=FLOOR_PRICE" },
+        { text: "Arbeiteten bereits an AAA Gaming Projekten für AMC & Netflix", link: "https://orangecomet.com/#games" },
+        { text: "Bauten das erste dynamische NFT-Spiel auf der SUI Blockchain in Zusammenarbeit mit MystenLabs (ex-DIEM/META)" },
+      ]
+    : [
+        { text: "Part of Mint State Labs - Techstars Web3 Accelerator Alumni", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
+        { text: "NFTs for Hollywood: Collections on ETH for William Shatner, Sir Anthony Hopkins, as well as movies/series like The Walking Dead, Vampire Diaries, and more...", link: "https://opensea.io/OrangeComet/created?search%5BsortAscending%5D=false&search%5BsortBy%5D=FLOOR_PRICE" },
+        { text: "Worked on AAA gaming projects for AMC & Netflix", link: "https://orangecomet.com/#games" },
+        { text: "Built the first dynamic NFT game on the SUI blockchain in collaboration with MystenLabs (ex-DIEM/META)" },
+      ],
     advisors: language === 'de'
       ? [
           {
@@ -780,10 +770,9 @@ export default function W3BotsPresentation() {
   const coverLetter = {
   de: {
     title: "Anschreiben",
-    position: "Full Stack Entwickler",
     introduction: "Sehr geehrtes Techstars-Team,",
     content: [
-      "Mit großer Begeisterung bewerben wir uns für den Techstars Web3 Accelerator 2024. Als Team mit nachgewiesener Erfolgsbilanz in der Blockchain-Entwicklung und einem tiefen Verständnis für die Herausforderungen im Web3-Bereich, entwickeln wir innovative Lösungen, die die Interaktion mit DeFi-Protokollen sicherer und zugänglicher machen.",
+      "mit großer Begeisterung bewerben wir uns für den Techstars Web3 Accelerator 2024. Als Team mit nachgewiesener Erfolgsbilanz in der Blockchain-Entwicklung und einem tiefen Verständnis für die Herausforderungen im Web3-Bereich, entwickeln wir innovative Lösungen, die die Interaktion mit DeFi-Protokollen sicherer und zugänglicher machen.",
       "Unsere technische Expertise zeigt sich in der Entwicklung fortschrittlicher Blockchain-Tools und -Protokolle. Mit einem Stack aus modernsten Technologien und einem Fokus auf Sicherheit und Skalierbarkeit arbeiten wir an der Zukunft der dezentralen Finanzwelt.",
       "Das W3BOTS-Team vereint Erfahrungen aus erfolgreichen Web3-Projekten, darunter die Sir Anthony Hopkins NFT Collection und das erste dynamische NFT-Spiel auf der SUI-Blockchain. Unsere Vision einer sicheren und zugänglichen Web3-Zukunft, gepaart mit technischer Innovation, macht uns zu idealen Kandidaten für das Programm."
     ],closing: "Mit freundlichen Grüßen,\nMax Mustermann"
@@ -792,7 +781,7 @@ export default function W3BotsPresentation() {
     title: "Cover Letter",
     introduction: "Dear Techstars Team,",
     content: [
-      "I am excited to apply for the Techstars Web3 Accelerator 2024. As a team with a proven track record in blockchain development and a deep understanding of challenges in the Web3 space, we develop innovative solutions that make interaction with DeFi protocols safer and more accessible.",
+      "we are excited to apply for the Techstars Web3 Accelerator 2024. As a team with a proven track record in blockchain development and a deep understanding of challenges in the Web3 space, we develop innovative solutions that make interaction with DeFi protocols safer and more accessible.",
       "Our technical expertise is demonstrated by the development of advanced blockchain tools and protocols. Using a stack of cutting-edge technologies with a focus on security and scalability, we are working on the future of decentralized finance.",
       "The W3BOTS team combines experience from successful Web3 projects, including the Sir Anthony Hopkins NFT Collection and the first dynamic NFT game on the SUI blockchain. Our vision of a secure and accessible Web3 future, coupled with technical innovation, makes us ideal candidates for the program."
     ], closing: "Yours sincerely,\nMax Mustermann"
@@ -950,13 +939,21 @@ export default function W3BotsPresentation() {
 
         <Section title={language === 'de' ? "Team & Expertise" : "Team & Expertise"} subtitle={language === 'de' ? "Ein Team, das sich ergänzt und begeistert" : "A team that complements and inspires"}>
           <div className="space-y-6 p-3">
-            <div>
+          <div>
               <h3 className="font-bold text-lg mb-4">
                 {language === 'de' ? "Highlights" : "Highlights"}
               </h3>
               <ul className="list-disc pl-5 space-y-2">
                 {team.highlights.map((highlight, idx) => (
-                  <li key={idx} className="">{highlight}</li>
+                  <li key={idx}>
+                    {highlight.link ? (
+                      <a href={highlight.link} target="_blank" rel="noopener noreferrer" className="underline hover:underline">
+                        {highlight.text}
+                      </a>
+                    ) : (
+                      highlight.text
+                    )}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -967,16 +964,6 @@ export default function W3BotsPresentation() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {team.members.map((member) => (
                   <TeamMemberCard key={member.name} {...member} />
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">
-                {language === 'de' ? "Berater" : "Advisors"}
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {team.advisors.map((advisor) => (
-                  <AdvisorCard key={advisor.name} {...advisor} />
                 ))}
               </div>
             </div>
