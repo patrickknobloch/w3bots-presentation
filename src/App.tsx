@@ -159,6 +159,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, status, image, color, 
       color === 'green' ? 'from-green-300/10 to-green-300/0' :
       color === 'blue' ? 'from-blue-500/10 to-blue-300/0' :
       color === 'indigo' ? 'from-indigo-500/10 to-indigo-300/0' :
+      color === 'red' ? 'from-red-500/10 to-red-300/0' :
       color === 'cyan' ? 'from-cyan-300/10  to-cyan-300/0' : ''
       
     }`}>    <img
@@ -168,6 +169,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, status, image, color, 
         color === 'green' ? 'border-green-300/30 shadow-green-300/30' :
         color === 'blue' ? 'border-blue-500/30 shadow-blue-500/30' :
         color === 'indigo' ? 'border-indigo-500/30 shadow-indigo-500/30' :
+        color === 'red' ? 'border-yellow-300/30 shadow-yellow-500/30' :
         color === 'cyan' ? 'border-cyan-500/50 shadow-cyan-600/30' : ''
       }`}
     />
@@ -490,10 +492,10 @@ export default function W3BotsPresentation() {
           ],
       description: language === 'de' 
         ? [
-            "Trady ist ein KI-gesteuerter, automatischer/manueller Investment-Bot für Tokens, der Investitionen und Auszahlungen nahtlos verwaltet."
+            "Pooly vereinfacht Investitionen in Kryptowährungs-Liquiditätspools mit einem Single-Asset-Kauf und ermöglicht es Nutzern, problemlos an DeFi teilzunehmen und Belohnungen zu verdienen, ohne sich mit komplexen Paarungen auseinandersetzen zu müssen."
           ]
         : [
-            "Trady is an AI-powered automatic investment bot for tokens, managing investments and payouts seamlessly."
+            "TPooly simplifies investing in cryptocurrency liquidity pools with a single asset purchase, making it easy for users to participate in DeFi and earn rewards without the complexity of pairings."
           ],
       revenue: language === 'de'
         ? [
@@ -508,44 +510,41 @@ export default function W3BotsPresentation() {
       title: "Looty",
       status: language === 'de' ? "Noch nicht begonnen" : "Not started yet",
       image: tradyLogo,
-      color:'blue',
+      color:'red',
       features: language === 'de' 
-        ? [
-            "Token-Sicherheitsbewertungen",
-            "Liquiditätsprüfung",
-            "Smart Contract Analyse",
-            "Wash Trading Detection",
-            "Social-Media-Bewertung",
-            "Multichain Support (TON, ETH, BSC, SUI)"
-          ]
+        ?[
+          "Interaktives Belohnungssystem",
+          "Dynamische Belohnungsstufen",
+          "Telegram Kanäle/Gruppen Integration",
+          "Multichain-Unterstützung (demnächst)"
+        ]
         : [
-            "Token Security Assessments",
-            "Liquidity Analysis",
-            "Smart Contract Analysis",
-            "Wash Trading Detection",
-            "Social Media Assessment",
-            "Multichain Support (TON, ETH, BSC, SUI)"
-          ],
+          "Interactive reward system",
+          "Dynamic reward tiers",
+          "Telegram channels/groups integration",
+          "Multichain Support (soon)"
+      ],
       description: language === 'de' 
         ? [
-            "Trady ist ein KI-gesteuerter, automatischer/manueller Investment-Bot für Tokens, der Investitionen und Auszahlungen nahtlos verwaltet."
+            "Looty bietet eine flexible Möglichkeit, die Interaktion in Communities zu stärken und neue Einnahmemöglichkeiten für Projektinhaber zu schaffen."
           ]
         : [
-            "Trady is an AI-powered automatic investment bot for tokens, managing investments and payouts seamlessly."
+            "Looty offers a flexible way to strengthen interaction in communities and create new revenue opportunities for project owners."
           ],
       revenue: language === 'de'
         ? [
-            "API-Nutzung mit Rate-Limits",
-            "Premium API-Zugang",
-            "Telegram-Gruppenintegration",
-            "Erweiterte Admin-Funktionen"
+            "Premium-API-Zugriff",
+            "Aufgabenbasierte Werbung",
+            "Telegram Kanäle/Gruppen Integration",
+            "Multichain-Unterstützung (demnächst)"
           ]
-        : [
-            "API Usage with Rate Limits",
-            "Premium API Access",
-            "Telegram Group Integration",
-            "Advanced Admin Features"
-          ]
+          : [
+            "Interactive reward system",
+            "Dynamic reward tiers",
+            "Telegram channels/groups integration",
+            "Multichain Support (soon)"
+        ]
+      
     }
   ];
 
