@@ -248,7 +248,7 @@ export default function W3BotsPresentation() {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
-  const [language, setLanguage] = useState<'de' | 'en'>('de');
+  const [language, setLanguage] = useState<'de' | 'en'>('en');
 
   interface PainPointProps {
     icon: React.ComponentType<{ className?: string }>;
@@ -389,7 +389,7 @@ export default function W3BotsPresentation() {
     }
     ,{
       title: "Academy",
-      status: language === 'de' ? "In der Entwicklung" : "In development",
+      status: language === 'de' ? "In der Entwicklung" : "In Development",
       image: academyLogo,
       color:'yellow',
       features: language === 'de' 
@@ -471,7 +471,7 @@ export default function W3BotsPresentation() {
     },
     {
       title: "Pooly",
-      status: language === 'de' ? "In der Entwicklung" : "In development",
+      status: language === 'de' ? "In der Entwicklung" : "In Development",
       image: poolyLogo,
       color:'blue',
       features: language === 'de' 
@@ -549,13 +549,13 @@ export default function W3BotsPresentation() {
         { text: "Teil von Mint State Labs - Techstars Web3 Accelerator Alumni", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
         { text: "NFTs für Hollywood: Collections auf ETH für William Shatner, Sir Anthony Hopkins, sowie Filmen/Serien wie The Walking Dead, Vampires Diaries uvm.", link: "https://opensea.io/OrangeComet/created?search%5BsortAscending%5D=false&search%5BsortBy%5D=FLOOR_PRICE" },
         { text: "Arbeiteten bereits an AAA Gaming Projekten für AMC & Netflix", link: "https://orangecomet.com/#games" },
-        { text: "Bauten das erste dynamische NFT-Spiel auf der SUI Blockchain in Zusammenarbeit mit MystenLabs (ex-DIEM/META)" },
+        { text: "Bauten das erste dynamische NFT-Spiel auf der SUI Blockchain in Zusammenarbeit mit MystenLabs (ex-DIEM/META)", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
       ]
     : [
         { text: "Part of Mint State Labs - Techstars Web3 Accelerator Alumni", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
         { text: "NFTs for Hollywood: Collections on ETH for William Shatner, Sir Anthony Hopkins, as well as movies/series like The Walking Dead, Vampire Diaries, and more...", link: "https://opensea.io/OrangeComet/created?search%5BsortAscending%5D=false&search%5BsortBy%5D=FLOOR_PRICE" },
         { text: "Worked on AAA gaming projects for AMC & Netflix", link: "https://orangecomet.com/#games" },
-        { text: "Built the first dynamic NFT game on the SUI blockchain in collaboration with MystenLabs (ex-DIEM/META)" },
+        { text: "Built the first dynamic NFT game on the SUI blockchain in collaboration with MystenLabs (ex-DIEM/META)", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
       ],
     advisors: language === 'de'
       ? [
@@ -587,13 +587,13 @@ export default function W3BotsPresentation() {
     ? [
         {
           name: "Patrick Knobloch",
-          role: "Engineering Director",
+          role: "Head of Engineering",
           description: "Fundierte Erfahrung in der Blockchain-, App & Webentwicklung sowie im UI & UX Design.",
           photo: patrickKnoblochPhoto
         },
         {
           name: "Mike Tsakonas",
-          role: "Operation Director",
+          role: "Head of Operations",
           description: "Überwachung der operativen Strategie und Ausführung. Umfangreiche Erfahrung in der Web3-Produktentwicklung, kreativen Content-Produktion und Projektmanagement.",
           photo: mikeTsakonasPhoto
         },
@@ -607,13 +607,13 @@ export default function W3BotsPresentation() {
     : [
         {
           name: "Patrick Knobloch",
-          role: "Engineering Director",
+          role: "Head of Engineering",
           description: "Extensive experience in blockchain, app & web development, as well as in UI & UX design.",
           photo: patrickKnoblochPhoto
         },
         {
           name: "Mike Tsakonas",
-          role: "Operation Director",
+          role: "Head of Operations",
           description: "Overseeing operational strategy and execution. Extensive background in Web3 product development, creative content production, and project management.",
           photo: mikeTsakonasPhoto
         },
@@ -776,7 +776,7 @@ export default function W3BotsPresentation() {
       "mit großer Begeisterung bewerben wir uns für den Techstars Web3 Accelerator 2024. Als Team mit nachgewiesener Erfolgsbilanz in der Blockchain-Entwicklung und einem tiefen Verständnis für die Herausforderungen im Web3-Bereich, entwickeln wir innovative Lösungen, die die Interaktion mit DeFi-Protokollen sicherer und zugänglicher machen.",
       "Unsere technische Expertise zeigt sich in der Entwicklung fortschrittlicher Blockchain-Tools und -Protokolle. Mit einem Stack aus modernsten Technologien und einem Fokus auf Sicherheit und Skalierbarkeit arbeiten wir an der Zukunft der dezentralen Finanzwelt.",
       "Das W3BOTS-Team vereint Erfahrungen aus erfolgreichen Web3-Projekten, darunter die Sir Anthony Hopkins NFT Collection und das erste dynamische NFT-Spiel auf der SUI-Blockchain. Unsere Vision einer sicheren und zugänglichen Web3-Zukunft, gepaart mit technischer Innovation, macht uns zu idealen Kandidaten für das Programm."
-    ],closing: "Mit freundlichen Grüßen,\nMax Mustermann"
+    ],closing: ""
   },
   en: {
     title: "Cover Letter",
@@ -785,7 +785,7 @@ export default function W3BotsPresentation() {
       "we are excited to apply for the Techstars Web3 Accelerator 2024. As a team with a proven track record in blockchain development and a deep understanding of challenges in the Web3 space, we develop innovative solutions that make interaction with DeFi protocols safer and more accessible.",
       "Our technical expertise is demonstrated by the development of advanced blockchain tools and protocols. Using a stack of cutting-edge technologies with a focus on security and scalability, we are working on the future of decentralized finance.",
       "The W3BOTS team combines experience from successful Web3 projects, including the Sir Anthony Hopkins NFT Collection and the first dynamic NFT game on the SUI blockchain. Our vision of a secure and accessible Web3 future, coupled with technical innovation, makes us ideal candidates for the program."
-    ], closing: "Yours sincerely,\nMax Mustermann"
+    ], closing: ""
   }
 };
 
