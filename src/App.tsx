@@ -533,12 +533,17 @@ export default function W3BotsPresentation() {
       revenue: language === 'de'
         ? [
             "Premium-API-Zugriff",
-            "Aufgabenbasierte Werbung"
+            "Aufgabenbasierte Werbung",
+            "Whitelabel-Lizenzen",
+            "Transaktionsgebühren"
           ]
           : [
-            "Interactive reward system",
-            "Dynamic reward tiers"
-        ]
+            "Premium API access",
+            "Task-based advertising",
+            "Whitelabel licenses",
+            "Transaction fees"
+          ]
+          
       
     }
   ];
