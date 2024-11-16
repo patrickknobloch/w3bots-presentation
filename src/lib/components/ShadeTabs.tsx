@@ -77,7 +77,7 @@ interface TabsContentProps {
 }
 
 export const TabsContent: React.FC<TabsContentProps> = ({ value, className, children }) => (
-  <div className={className}>
+  <div className={`${className} gap-6`}>
     {children}
   </div>
 );

@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 658 600" width="658" height="600">
+	<defs>
+    <radialGradient id="radial-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color: #67e8f9;" />
+      <stop offset="100%" style="stop-color: #06b6d4;" />
+    </radialGradient>
+  </defs>
+	<style>
+    .s0 { fill: url(#radial-gradient); } 
+	</style>
+	<path id="Ebene 2" fill-rule="evenodd" class="s0" d="m75.2 320.9c-46.6-127.5 18.7-268.2 146.2-314.9q0.1 0 0.2 0l46.8 127.7q-0.1 0-0.1 0c-56.8 20.8-85.9 83.5-65.1 140.3 20.7 56.8 83.4 85.9 140.2 65.1q0.1 0 0.1 0l46.8 127.9q-0.1 0.1-0.2 0.1c-127.4 46.6-268.2-18.7-314.9-146.2z"/>
+	<path id="Ebene 2 copy" fill-rule="evenodd" class="s0" d="m582.5 277.7c46.6 127.5-18.8 268.2-146.3 314.8q-0.1 0.1-0.2 0.1l-46.7-127.8q0.1 0 0.1 0c56.8-20.7 86-83.4 65.2-140.2-20.7-56.8-83.4-85.9-140.2-65.2q-0.1 0-0.1 0.1l-46.8-128q0.1-0.1 0.2-0.1c127.5-46.6 268.3 18.8 314.8 146.3z"/>
+</svg>

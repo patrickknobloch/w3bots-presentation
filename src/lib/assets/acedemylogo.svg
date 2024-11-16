@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 658 600" width="658" height="600">
+	<title>Neues Projekt</title>
+	<style>
+		.s0 { fill: #fde047 } 
+	</style>
+	<path id="Ebene 2 copy 2" fill-rule="evenodd" class="s0" d="m347.4 401.1c-12.2-33.3-18-67.5-18.1-101h163.9c0.1 14.8 2.7 29.8 8.1 44.6 19.8 54 71 87.2 125.4 86.3v164c-121.2 0.9-235.2-73.4-279.3-193.9zm-36.4-1.3c-43.8 121-158 195.8-279.5 194.9v-163.7c54.5 0.7 105.7-32.7 125.3-86.8 5.3-14.6 7.9-29.5 7.9-44.1h164c-0.1 33.1-5.8 66.8-17.7 99.7z"/>
+	<path id="Form 1 copy 3" fill-rule="evenodd" class="s0" d="m329.2 6.9q0.4 0 0.8 0l-0.8 168-166.2-0.8c-0.1-92.1 74-166.7 166.2-167.2z"/>
+	<path id="Form 1 copy 4" fill-rule="evenodd" class="s0" d="m328 173.9l0.8-167c92.4 0.5 166.7 75.5 166.2 167.8z"/>
+	<path id="Form 2" class="s0" d="m493.3 168v10h-329.6v-10z"/>
+</svg>

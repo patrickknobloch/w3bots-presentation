@@ -8,19 +8,70 @@ import Button from './lib/components/Button';
 import Badge from './lib/components/Badge';
 import ScrollArea from './lib/components/ScrollArea';
 import { Repeat } from 'lucide-react';
+
 import testPhoto from './lib/assets/image14.jpg';
+import patrickKnoblochPhoto from './lib/assets/patrick_knobloch.jpg';
+
+import audityLogo from './lib/assets/auditylogo.svg';
+import swapyLogo from './lib/assets/swapylogo.svg';
+import academyLogo from './lib/assets/acedemylogo.svg';
+import tradyLogo from './lib/assets/tradylogo.svg';
+
 import { XOctagon, CheckCircle } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './lib/components/ShadeTabs';
+import { SunDim } from 'lucide-react';
+import { Moon } from 'lucide-react';
+
+interface FeaturesRevenueProps {
+  features: string[];
+  revenue: string[];
+  title: string;
+}
+
+const FeaturesRevenueTabs: React.FC<FeaturesRevenueProps> = ({ features, revenue, title }) => {
+  return (
+    <Tabs defaultValue="features" className="space-y-6 ">
+      <TabsList className="flex border dark:bg-neutral-800/20 dark:border-neutral-800 rounded-xl w-fit">
+        <TabsTrigger value="features">Features</TabsTrigger>
+        <TabsTrigger value="revenue">{title === 'Academy' ? 'Revenue Model' : 'Revenue Model'}</TabsTrigger>
+      </TabsList>
+
+      <TabsContent value="features" className="pt-4">
+        <div>
+          <h4 className="font-medium mb-2">Features</h4>
+          <ul className="list-disc pl-5 space-y-1 opacity-70">
+            {features.map((feature, idx) => (
+              <li key={idx} className="text-base">{feature}</li>
+            ))}
+          </ul>
+        </div>
+      </TabsContent>
+
+      <TabsContent value="revenue" className="pt-4">
+        <div>
+          <h4 className="font-medium mb-2">Revenue Model</h4>
+          <ul className="list-disc pl-5 space-y-1 opacity-70">
+            {revenue.map((rev, idx) => (
+              <li key={idx} className="text-base">{rev}</li>
+            ))}
+          </ul>
+        </div>
+      </TabsContent>
+    </Tabs>
+  );
+};
 
 interface SectionProps {
   title: string;
+  subtitle: string;
   children: ReactNode;
 }
 
-const Section: React.FC<SectionProps> = ({ title, children }) => (
-  <Card className="w-full mb-6 ">
-    <CardHeader className='dark:border-neutral-800'>
-      <CardTitle className="text-2xl ">{title}</CardTitle>
+const Section: React.FC<SectionProps> = ({ title,subtitle, children }) => (
+  <Card className="w-full mb-6 border-none shadow-none p-0 py-3 md:py-6">
+    <CardHeader className='border-none text-center flex flex-col'>
+    <span className="font-normal text-2xl pb-3 opacity-50">{subtitle}</span>
+      <CardTitle className="text-5xl md:text-7xl mb-12 font ">{title}</CardTitle>
     </CardHeader>
     <CardContent>{children}</CardContent>
   </Card>
@@ -35,7 +86,7 @@ const LanguageToggle: React.FC<LanguageToggleProps> = ({ language, setLanguage }
   <Button 
     variant="outline" 
     onClick={() => setLanguage(language === 'de' ? 'en' : 'de')}
-    className="fixed top-4 right-4 flex items-center gap-2 bg-white dark:text-neutral-900 shadow-md p-3 rounded-full"
+    className="fixed top-4 right-4  z-50 flex items-center gap-2 text-neutral-900 dark:text-white/80 bg-white dark:bg-neutral-800 shadow-md p-3 rounded-full"
   >
     <Globe className="w-5 h-5" />
     <span className="font-medium">{language.toUpperCase()}</span>
@@ -51,15 +102,15 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, setTheme }) => (
   <Button
     variant="outline"
     onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-    className="fixed bottom-4 right-4 flex items-center gap-2 dark:text-neutral-900  bg-white shadow-md p-3 rounded-full"
+    className="fixed bottom-4 z-50 right-4 flex items-center gap-2 text-neutral-900 dark:text-white/80 bg-white dark:bg-neutral-800 shadow-md p-3 rounded-full"
   >
     {theme === 'light' ? (
       <>
-        <span className="font-medium">Dark Mode</span>
+        <Moon />
       </>
     ) : (
       <>
-        <span className="font-medium">Light Mode</span>
+        <SunDim />
       </>
     )}
   </Button>
@@ -73,15 +124,15 @@ interface RevenueModelProps {
 }
 
 const RevenueModel: React.FC<RevenueModelProps> = ({ title, items, icon: Icon }) => (
-  <Card className="w-full h-full shadow-none p-3 ">
-    <CardContent className="pt-6 ">
-      <div className="flex items-center gap-2 mb-3">
+  <Card className="w-full h-full shadow-none p-3 bg-neutral-100/10 border border-neutral-200 dark:text-white rounded-xl dark:bg-neutral-800/10 dark:border-neutral-800">
+    <CardContent className="pt-6">
+      <div className="flex items-center gap-2 mb-6 pb-6 border-b border-neutral-800">
         <Icon className="w-5 h-5 text-neutral-500" />
-        <h3 className="font-bold text-lg">{title}</h3>
+        <h3 className="font-bold text-xl">{title}</h3>
       </div>
       <ul className="space-y-2">
         {items.map((item, index) => (
-          <li key={index} className="flex items-center gap-2 text-sm ">
+          <li key={index} className="flex items-center gap-2 text-base ">
             <ChevronRight className="w-4 h-4 text-neutral-500" />
             {item}
           </li>
@@ -93,17 +144,36 @@ const RevenueModel: React.FC<RevenueModelProps> = ({ title, items, icon: Icon })
 
 interface ProductCardProps {
   title: string;
+  description: string[];
   status: string;
-  icon: React.ComponentType<{ className?: string }>;
+  color: string; 
   features: string[];
+  image : string; 
   revenue: string[];
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ title, status, icon: Icon, features, revenue }) => (
-  <Card className="w-full h-full shadow-none p-3 ">
-    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 border-none">
-      <CardTitle className="text-lg font-bold flex items-center gap-2 ">
-        <Icon className="w-5 h-5" />
+const ProductCard: React.FC<ProductCardProps> = ({ title, status, image, color, features,description, revenue }) => (
+  <div className="group flex flex-col h-full bg-neutral-100/10 border border-neutral-200 dark:text-white rounded-xl dark:bg-neutral-800/10 dark:border-neutral-800">
+    <div className={`h-52 flex flex-col justify-center items-center bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] rounded-t-xl ${
+      color === 'yellow' ? 'from-yellow-500/10 to-yellow-700/0' :
+      color === 'green' ? 'from-green-300/10 to-green-300/0' :
+      color === 'blue' ? 'from-blue-500/10 to-blue-300/0' :
+      color === 'indigo' ? 'from-indigo-500/10 to-indigo-300/0' :
+      color === 'cyan' ? 'from-cyan-300/10  to-cyan-300/0' : ''
+      
+    }`}>    <img
+      src={image}
+      className={`w-32 p-6 border shadow-2xl rounded-2xl ${
+        color === 'yellow' ? 'border-yellow-500/30 shadow-yellow-500/30' :
+        color === 'green' ? 'border-green-300/30 shadow-green-300/30' :
+        color === 'blue' ? 'border-blue-500/30 shadow-blue-500/30' :
+        color === 'indigo' ? 'border-indigo-500/30 shadow-indigo-500/30' :
+        color === 'cyan' ? 'border-cyan-500/50 shadow-cyan-600/30' : ''
+      }`}
+    />
+    </div>
+    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-6 border-t border-neutral-600/20">
+      <CardTitle className="text-2xl font-bold flex items-center gap-2 p-3 pb-0">
         {title}
       </CardTitle>
       <Badge variant={
@@ -117,28 +187,18 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, status, icon: Icon, fe
       </Badge>
     </CardHeader>
     <CardContent>
-      <div className="space-y-4">
-        <div>
-          <h4 className="font-medium mb-2">Features</h4>
-          <ul className="list-disc pl-5 space-y-1">
-            {features.map((feature, idx) => (
-              <li key={idx} className="text-sm ">{feature}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-medium mb-2">
-            {title === 'Academy' ? 'Revenue Model' : 'Revenue Model'}
-          </h4>
-          <ul className="list-disc pl-5 space-y-1">
-            {revenue.map((rev, idx) => (
-              <li key={idx} className="text-sm ">{rev}</li>
-            ))}
-          </ul>
-        </div>
+      <div className="space-y-4 p-3">
+      <p className='pb-3'>{description}</p>
+
+      <FeaturesRevenueTabs
+      features={features}
+      revenue={revenue}
+      title="Academy"
+    />
+
       </div>
     </CardContent>
-  </Card>
+  </div>
 );
 
 interface AdvisorCardProps {
@@ -148,7 +208,7 @@ interface AdvisorCardProps {
 }
 
 const AdvisorCard: React.FC<AdvisorCardProps> = ({ name, role, description }) => (
-  <Card className='p-3 shadow-none'>
+  <Card className='p-3 shadow-none bg-neutral-100/10 border border-neutral-200 dark:text-white rounded-xl dark:bg-neutral-800/10 dark:border-neutral-800'>
     <CardContent className="pt-6">
       <h4 className="font-bold">{name}</h4>
       <Badge variant="outline" className="mt-1 mb-2">{role}</Badge>
@@ -165,19 +225,19 @@ interface TeamMemberCardProps {
 }
 
 const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name, role, description, photo }) => (
-  <Card className='p-3 shadow-none'>
+  <Card className='p-3 shadow-none bg-neutral-100/10 border border-neutral-200 dark:text-white rounded-xl dark:bg-neutral-800/10 dark:border-neutral-800'>
     <CardContent className="pt-6">
-      <img src={photo} alt={name} className="w-full h-40 object-cover rounded-lg mb-4" />
+      <img src={photo} alt={name} className="w-full h-64 object-cover rounded-lg mb-4" />
       <h4 className="font-bold">{name}</h4>
       <Badge className="mt-1 mb-2 ">{role}</Badge>
-      <p className="text-sm ">{description}</p>
+      <p className="text-base mt-3 ">{description}</p>
     </CardContent>
   </Card>
 );
 
 export default function W3BotsPresentation() {
 
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   useEffect(() => {
     document.documentElement.className = theme;  // Setze das HTML-Element entsprechend dem Thema
@@ -196,11 +256,11 @@ export default function W3BotsPresentation() {
   }
   
   const PainPoint: React.FC<PainPointProps> = ({ icon: Icon, title, description }) => (
-    <div className="flex gap-4 p-4 rounded-lg border dark:border-red-500/10 bg-red-100 dark:bg-red-500/5">
-      <Icon className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
+    <div className="flex dark:bg-neutral-800/20 gap-6 p-6 rounded-lg border dark:border-red-500/10">
+      <Icon className="w-6 h-6 text-red-400 flex-shrink-0 mt-1" />
       <div>
         <h4 className="font-bold">{title}</h4>
-        <p className="">{description}</p>
+        <p className="opacity-70 mt-3">{description}</p>
       </div>
     </div>
   );
@@ -212,11 +272,11 @@ export default function W3BotsPresentation() {
   }
   
   const Solution: React.FC<SolutionProps> = ({ icon: Icon, title, description }) => (
-    <div className="flex gap-4 p-4 rounded-lg border border-green-100 dark:border-green-300/20 bg-green-50 dark:bg-green-300/10">
-      <Icon className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+    <div className="flex gap-6 p-6 rounded-lg border dark:border-green-300/10 dark:bg-neutral-800/20">
+      <Icon className="w-6 h-6 text-green-300 flex-shrink-0 mt-1" />
       <div>
         <h4 className="font-bold">{title}</h4>
-        <p className="">{description}</p>
+        <p className="opacity-70 mt-3">{description}</p>
       </div>
     </div>
   );
@@ -228,15 +288,15 @@ export default function W3BotsPresentation() {
   const CoverLetterCard: React.FC<CoverLetterCardProps> = ({ language }) => {
     const letter = coverLetter[language];
     return (
-      <Card className='p-6'>
-        <CardContent className="pt-6">
-          <h4 className="font-bold text-lg mb-4">{letter.title}</h4>
+      <Card className='p-6 dark:bg-neutral-800/30 py-6 shadow-none'>
+        <CardContent className="pt-3">
+          <h4 className="font-bold text-2xl mb-4">{letter.title}</h4>
         
-          <p className="mb-4 ">{letter.introduction}</p>
+          <p className="mb-4 text-base opacity-80 ">{letter.introduction}</p>
           {letter.content.map((paragraph, index) => (
-            <p key={index} className="mb-4 ">{paragraph}</p>
+            <p key={index} className="mb-4  text-base opacity-80 ">{paragraph}</p>
           ))}
-          <p className="font-semibold ">{letter.closing}</p>
+          <p className="font-semibold  text-base opacity-80 ">{letter.closing}</p>
         </CardContent>
       </Card>
     );
@@ -249,7 +309,8 @@ export default function W3BotsPresentation() {
     {
       title: "Audity",
       status: language === 'de' ? "In der Testphase" : "In Testing",
-      icon: AlertCircle,
+      image: audityLogo,
+      color:'green',
       features: language === 'de' 
         ? [
             "Token-Sicherheitsbewertungen",
@@ -266,6 +327,13 @@ export default function W3BotsPresentation() {
             "Wash Trading Detection",
             "Social Media Assessment",
             "Multichain Support (soon)"
+          ],
+        description: language === 'de' 
+        ? [
+            "Audity analysiert die Liquidität, Inhaber, Wash Trading, Smart Contracts und soziale Metriken und erstellt eine umfassende Bewertung für Kryptowährungs-Token."
+          ]
+        : [
+            "Audity analyzes liquidity, holders, wash trading, smart contracts, and social metrics, generating a comprehensive score for cryptocurrency tokens."
           ],
       revenue: language === 'de'
         ? [
@@ -284,7 +352,8 @@ export default function W3BotsPresentation() {
     {
       title: "Swapy",
       status: language === 'de' ? "In der Testphase" : "In Testing",
-      icon: AlertCircle,
+      image: swapyLogo,
+      color:'cyan',
       features: language === 'de' 
         ? [
             "DEX Aggregation",
@@ -297,6 +366,13 @@ export default function W3BotsPresentation() {
             "Best Price Discovery",
             "Optimized Swap Routes",
             "Multichain Support (soon)"
+          ],
+      description: language === 'de' 
+        ? [
+            "Swapy kombiniert mehrere DEX-Anbieter zu einem einzigen Zugangspunkt, um Token-Swaps nahtlos und effizient zu gestalten"
+          ]
+        : [
+            "Swapy combines multiple DEX providers into a single access point to make token swaps seamless and efficient."
           ],
       revenue: language === 'de'
         ? [
@@ -313,7 +389,8 @@ export default function W3BotsPresentation() {
     ,{
       title: "Academy",
       status: language === 'de' ? "In der Entwicklung" : "In development",
-      icon: AlertCircle,
+      image: academyLogo,
+      color:'yellow',
       features: language === 'de' 
         ? [
             "Interaktive Lernmodule",
@@ -329,6 +406,13 @@ export default function W3BotsPresentation() {
           "DeFi masterclasses / Premium",
           "Community & product courses"
         ],
+      description: language === 'de' 
+        ? [
+            "Academy ist eine KI-gestützte Lernplattform, die Nutzern hilft, Web3-Konzepte zu meistern – von Trading und Wallets bis hin zu Setups und Strategien. Perfekt für Anfänger und Profis gleichermaßen."
+          ]
+        : [
+            "Academy is an AI-powered learning platform that helps users master Web3 concepts, from trading and wallets to setups and strategies. Perfect for beginners and pros alike."
+          ],
       revenue: language === 'de'
         ? [
             "Premium-Kurse",
@@ -342,39 +426,11 @@ export default function W3BotsPresentation() {
           "Product placement",
           "Corporate licenses/white label solutions"
         ]        
-    },
-    {
-      title: "Pooly",
-      status: language === 'de' ? "In der Entwicklung" : "In development",
-      icon: AlertCircle,
-      features: language === 'de' 
-        ? [
-            "Vereinfachtes investieren",
-            "Einzel-Asset Kauf/Verkauf",
-            "Automatische Reinvestition",
-            "Risiko-Management",
-            "Performance/Portfolio Verfolgung"
-          ]
-        : [
-            "Simple invest",
-            "Single Asset buy/sell",
-            "Automatic re-investment",
-            "Risk Management",
-            "Performance/Portfolio Tracking",
-          ],
-      revenue: language === 'de'
-        ? [
-            "Premium-Strategien",
-            "Transaktionsgebühren",
-          ]
-        : [
-            "Premium-Strategies",
-            "Transactions fees",
-          ]
     },{
       title: "Trady",
       status: language === 'de' ? "Noch nicht begonnen" : "Not started yet",
-      icon: AlertCircle,
+      image: tradyLogo,
+      color:'indigo',
       features: language === 'de' 
         ? [
             "KI-gestützte Trading-Strategien",
@@ -392,6 +448,13 @@ export default function W3BotsPresentation() {
           "Portfolio optimization",
           "Multichain support (coming soon)"
         ],
+      description: language === 'de' 
+        ? [
+            "Trady ist ein KI-gesteuerter, automatischer/manueller Investment-Bot für Tokens, der Investitionen und Auszahlungen nahtlos verwaltet."
+          ]
+        : [
+            "Trady is an AI-powered automatic investment bot for tokens, managing investments and payouts seamlessly."
+          ],
       revenue: language === 'de'
         ? [
             "Transaktionsgebühren",
@@ -404,10 +467,48 @@ export default function W3BotsPresentation() {
           "Advanced features"
         ]
         
+    },
+    {
+      title: "Pooly",
+      status: language === 'de' ? "In der Entwicklung" : "In development",
+      image: tradyLogo,
+      color:'blue',
+      features: language === 'de' 
+        ? [
+            "Vereinfachtes investieren",
+            "Einzel-Asset Kauf/Verkauf",
+            "Automatische Reinvestition",
+            "Risiko-Management",
+            "Performance/Portfolio Verfolgung"
+          ]
+        : [
+            "Simple invest",
+            "Single Asset buy/sell",
+            "Automatic re-investment",
+            "Risk Management",
+            "Performance/Portfolio Tracking",
+          ],
+      description: language === 'de' 
+        ? [
+            "Trady ist ein KI-gesteuerter, automatischer/manueller Investment-Bot für Tokens, der Investitionen und Auszahlungen nahtlos verwaltet."
+          ]
+        : [
+            "Trady is an AI-powered automatic investment bot for tokens, managing investments and payouts seamlessly."
+          ],
+      revenue: language === 'de'
+        ? [
+            "Premium-Strategien",
+            "Transaktionsgebühren",
+          ]
+        : [
+            "Premium-Strategies",
+            "Transactions fees",
+          ]
     },{
       title: "Looty",
       status: language === 'de' ? "Noch nicht begonnen" : "Not started yet",
-      icon: AlertCircle,
+      image: tradyLogo,
+      color:'blue',
       features: language === 'de' 
         ? [
             "Token-Sicherheitsbewertungen",
@@ -425,6 +526,13 @@ export default function W3BotsPresentation() {
             "Social Media Assessment",
             "Multichain Support (TON, ETH, BSC, SUI)"
           ],
+      description: language === 'de' 
+        ? [
+            "Trady ist ein KI-gesteuerter, automatischer/manueller Investment-Bot für Tokens, der Investitionen und Auszahlungen nahtlos verwaltet."
+          ]
+        : [
+            "Trady is an AI-powered automatic investment bot for tokens, managing investments and payouts seamlessly."
+          ],
       revenue: language === 'de'
         ? [
             "API-Nutzung mit Rate-Limits",
@@ -439,7 +547,6 @@ export default function W3BotsPresentation() {
             "Advanced Admin Features"
           ]
     }
-    // ... rest of the products array remains the same
   ];
 
   const team = {
@@ -490,7 +597,7 @@ export default function W3BotsPresentation() {
           name: "Patrick Knobloch",
           role: "UX/UI Designer",
           description: "Erfahrene Blockchain-Entwicklerin mit Fokus auf DeFi-Projekte",
-          photo: testPhoto
+          photo: patrickKnoblochPhoto
         },
         {
           name: "Mike Tsakonas",
@@ -499,7 +606,7 @@ export default function W3BotsPresentation() {
           photo: testPhoto
         },
         {
-          name: "Pedro Gusto",
+          name: "Pedro Augusto",
           role: "Lead Entwickler",
           description: "Gestaltet intuitive Benutzererfahrungen für Blockchain-Anwendungen",
           photo: testPhoto
@@ -510,7 +617,7 @@ export default function W3BotsPresentation() {
           name: "Patrick Knobloch",
           role: "UX/UI Designer",
           description: "Experienced blockchain developer focusing on DeFi projects",
-          photo: testPhoto
+          photo: patrickKnoblochPhoto
         },
         {
           name: "Mike Tsakonas",
@@ -519,7 +626,7 @@ export default function W3BotsPresentation() {
           photo: testPhoto
         },
         {
-          name: "Pedro Gusto",
+          name: "Pedro Augusto",
           role: "Lead Developer",
           description: "Designs intuitive user experiences for blockchain applications",
           photo: testPhoto
@@ -540,16 +647,6 @@ export default function W3BotsPresentation() {
           ]
         },
         {
-          title: "Trading & DeFi",
-          icon: Repeat,
-          items: [
-            "Transaktionsgebühren",
-            "Premium-Strategien",
-            "Yield-Farming Verwaltung",
-            "Transaktionsgebühren"
-          ]
-        },
-        {
           title: "Education & Community",
           icon: Users,
           items: [
@@ -560,7 +657,15 @@ export default function W3BotsPresentation() {
             "Produktplatzierung",
             "Unternehmenslizenzen/White Label Lösungen"
           ]
-        }
+        },
+        {
+          title: "Trading & DeFi",
+          icon: Repeat,
+          items: [
+            "Transaktionsgebühren",
+            "Premium-Strategien"
+          ]
+        },
       ]
     : [
         {
@@ -574,16 +679,6 @@ export default function W3BotsPresentation() {
           ]
         },
         {
-          title: "Trading & DeFi",
-          icon: DollarSign,
-          items: [
-            "Transaction Fees",
-            "Premium Strategies",
-            "Yield Farming Management",
-            "Transaction fees"
-          ]
-        },
-        {
           title: "Education & Community",
           icon: Users,
           items: [
@@ -594,6 +689,14 @@ export default function W3BotsPresentation() {
             "Product Placement",
             "Corporate Licenses/White Label Solutions"
           ]
+        },
+        {
+          title: "Trading & DeFi",
+          icon: Repeat,
+          items: [
+            "Transaction Fees",
+            "Premium Strategies"
+          ]
         }
       ];
 
@@ -603,7 +706,7 @@ export default function W3BotsPresentation() {
             {
               icon: XOctagon,
               title: "Komplexität der DeFi-Interaktionen",
-              description: "Nutzer müssen multiple Plattformen und Tools verstehen und verwalten, was zu Fehlern und Verlusten führen kann."
+              description: "Nutzer müssen viele Plattformen und Tools verstehen und verwalten, was zu Fehlern und Verlusten führen kann."
             },
             {
               icon: XOctagon,
@@ -697,14 +800,26 @@ export default function W3BotsPresentation() {
 
 
   return (
-    <ScrollArea className="h-full p-3 md:p-0 pb-6 bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-300/10 via-blue-950/0 to-slate-950/0">
-      <div className="w-full max-w-6xl mx-auto space-y-8">
+    <ScrollArea className="h-full p-3 md:p-6 pb-6 bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white">
+      <svg
+        className="absolute inset-0 opacity-5 z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        aria-hidden="true">
+        <defs>
+          <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1"
+            patternUnits="userSpaceOnUse">
+            <path d="M.5 200V.5H200" fill="none"></path>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"></rect>
+      </svg>
+
+      <div className="w-full max-w-7xl mx-auto space-y-8 relative z-50">
         <LanguageToggle language={language} setLanguage={setLanguage} />
         <ThemeToggle theme={theme} setTheme={setTheme} />
 
         <div className="w-full flex items-center justify-items-center flex-col space-y-4 mb-12">
           
-          <svg className='block mt-2 w-1/2 -ml-2 md:w-1/3 fill-slate-900' viewBox="0 0 4346 1023" xmlns="http://www.w3.org/2000/svg">
+          <svg className='block mt-2 w-1/2 -ml-2 md:w-1/5 fill-slate-900 dark:fill-white mb-6' viewBox="0 0 4346 1023" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_1446_118)">
              
               <g mask="url(#mask0_1446_118)">
@@ -777,19 +892,25 @@ export default function W3BotsPresentation() {
               </defs>
           </svg>
 
-          <p className="text-xl text-center px-6 ">
+          <p className="text-5xl font-normal text-center px-6 opacity-70">
             {language === 'de' 
-              ? "Techstars Web3 Accelerator Bewerbung 2024"
-              : "Techstars Web3 Accelerator Application 2024"
+              ? "Techstars Web3 Accelerator"
+              : "Techstars Web3 Accelerator"
+            }
+          </p>
+          <p className="text-6xl font-bold text-center px-6 pb-12">
+            {language === 'de' 
+              ? "Bewerbung 2024"
+              : "Application 2024"
             }
           </p>
         </div>
 
         <CoverLetterCard language={language} />
 
-        <Section title={language === 'de' ? "Problem & Lösung" : "Problem & Solution"}>
+        <Section title={language === 'de' ? "Problem & Lösung" : "Problem & Solution"} subtitle={language === 'de' ? "Nutzer verstehen & Prozesse vereinfachen" : "Understanding users & simplifying processes"}>
           <Tabs defaultValue="problem" className="w-full">
-            <TabsList className="grid w-full grid-cols-2">
+            <TabsList className="grid w-full grid-cols-2 bg-neutral-100/10 border border-neutral-200 dark:text-white rounded-xl dark:bg-neutral-800/10 dark:border-neutral-800">
               <TabsTrigger value="problem">
                 {language === 'de' ? "Das Problem" : "The Problem"}
               </TabsTrigger>
@@ -810,7 +931,7 @@ export default function W3BotsPresentation() {
           </Tabs>
         </Section>
 
-        <Section title={language === 'de' ? "Produkte" : "Products"}>
+        <Section title={language === 'de' ? "Produkte" : "Products"} subtitle={language === 'de' ? "Mehrwert schaffen durch innovative Lösungen" : "Creating value through innovative solutions"}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {products.map((product) => (
               <ProductCard key={product.title} {...product} />
@@ -818,7 +939,7 @@ export default function W3BotsPresentation() {
           </div>
         </Section>
         
-        <Section title={language === 'de' ? "Erlösströme" : "Revenue Streams"}>
+        <Section title={language === 'de' ? "Erlösströme" : "Revenue Streams"} subtitle={language === 'de' ? "Strategien für profitables Wachstum" : "Strategies for profitable growth"}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {revenueStreams.map((stream) => (
               <RevenueModel key={stream.title} {...stream} />
@@ -826,7 +947,7 @@ export default function W3BotsPresentation() {
           </div>
         </Section>
 
-        <Section title={language === 'de' ? "Team & Expertise" : "Team & Expertise"}>
+        <Section title={language === 'de' ? "Team & Expertise" : "Team & Expertise"} subtitle={language === 'de' ? "Ein Team, das sich ergänzt und begeistert" : "A team that complements and inspires"}>
           <div className="space-y-6 p-3">
             <div>
               <h3 className="font-bold text-lg mb-4">
