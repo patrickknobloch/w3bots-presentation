@@ -792,6 +792,7 @@ export default function W3BotsPresentation() {
 
   return (
     <ScrollArea className="h-full p-3 md:p-6 pb-6 bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white">
+      <a target="_blank" href='https://w3bots.de/'>
       <svg
         className="absolute inset-0 opacity-5 z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true">
@@ -803,6 +804,7 @@ export default function W3BotsPresentation() {
         </defs>
         <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"></rect>
       </svg>
+      </a>
 
       <div className="w-full max-w-7xl mx-auto space-y-8 relative z-50">
         <LanguageToggle language={language} setLanguage={setLanguage} />
