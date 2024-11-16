@@ -8,8 +8,9 @@ import Button from './lib/components/Button';
 import Badge from './lib/components/Badge';
 import ScrollArea from './lib/components/ScrollArea';
 
-import testPhoto from './lib/assets/image14.jpg';
 import patrickKnoblochPhoto from './lib/assets/patrick_knobloch.jpg';
+import mikeTsakonasPhoto from './lib/assets/mike.jpg';
+import pedroAugsutoPhoto from './lib/assets/gusto.jpg';
 
 import audityLogo from './lib/assets/auditylogo.svg';
 import swapyLogo from './lib/assets/swapylogo.svg';
@@ -586,41 +587,41 @@ export default function W3BotsPresentation() {
     ? [
         {
           name: "Patrick Knobloch",
-          role: "UX/UI Designer",
-          description: "Erfahrene Blockchain-Entwicklerin mit Fokus auf DeFi-Projekte",
+          role: "Engineering Director",
+          description: "Fundierte Erfahrung in der Blockchain-, App & Webentwicklung sowie im UI & UX Design.",
           photo: patrickKnoblochPhoto
         },
         {
           name: "Mike Tsakonas",
-          role: "Produktmanager",
-          description: "Verantwortlich für die Entwicklung und Skalierung von Web3-Produkten",
-          photo: testPhoto
+          role: "Operation Director",
+          description: "Überwachung der operativen Strategie und Ausführung. Umfangreiche Erfahrung in der Web3-Produktentwicklung, kreativen Content-Produktion und Projektmanagement.",
+          photo: mikeTsakonasPhoto
         },
         {
           name: "Pedro Augusto",
           role: "Lead Entwickler",
-          description: "Gestaltet intuitive Benutzererfahrungen für Blockchain-Anwendungen",
-          photo: testPhoto
+          description: "Leitung der allgemeinen Entwicklung von Infrastruktur und Anwendungen. Umfassende Erfahrung in Blockchain-, Web- und Spieleentwicklung.",
+          photo: pedroAugsutoPhoto
         }
       ]
     : [
         {
           name: "Patrick Knobloch",
-          role: "UX/UI Designer",
-          description: "Experienced blockchain developer focusing on DeFi projects",
+          role: "Engineering Director",
+          description: "Extensive experience in blockchain, app & web development, as well as in UI & UX design.",
           photo: patrickKnoblochPhoto
         },
         {
           name: "Mike Tsakonas",
-          role: "Product Manager",
-          description: "Responsible for developing and scaling Web3 products",
-          photo: testPhoto
+          role: "Operation Director",
+          description: "Overseeing operational strategy and execution. Extensive background in Web3 product development, creative content production, and project management.",
+          photo: mikeTsakonasPhoto
         },
         {
           name: "Pedro Augusto",
           role: "Lead Developer",
-          description: "Designs intuitive user experiences for blockchain applications",
-          photo: testPhoto
+          description: "Leading general development of infrastructure and applications. Extensive experience in blockchain, web and game development.",
+          photo: pedroAugsutoPhoto
         }
       ]
   };
@@ -937,7 +938,7 @@ export default function W3BotsPresentation() {
           </div>
         </Section>
 
-        <Section title={language === 'de' ? "Team & Expertise" : "Team & Expertise"} subtitle={language === 'de' ? "Ein Team, das sich ergänzt und begeistert" : "A team that complements and inspires"}>
+        <Section title={language === 'de' ? "Team & Expertise" : "Team & Expertise"} subtitle={language === 'de' ? "Vereint durch Vision - gestärkt durch Expertise" : "United by vision - empowered by expertise"}>
           <div className="space-y-6 p-3">
           <div>
               <h3 className="font-bold text-lg mb-4">
