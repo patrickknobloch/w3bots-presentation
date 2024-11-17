@@ -358,7 +358,7 @@ export default function W3BotsPresentation() {
             "Erweiterte Admin-Funktionen"
           ]
         : [
-            "API Usage with Rate Limits",
+            "Limited API Usage / Free",
             "Premium API Access",
             "Channel/Group-Subscriptions",
             "Access to Advanced Features"
