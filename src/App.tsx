@@ -801,9 +801,7 @@ export default function W3BotsPresentation() {
       "mit großer Begeisterung reichen wir unsere Bewerbung für das Techstars Web3 Accelerator Programm 2024 ein. Als ein Team mit einer langen Historie an bahnbrechenden Web3-Lösungen setzen wir uns dafür ein, dezentralisierte Finanzsysteme zu vereinfachen und für Nutzer weltweit sicherer zu gestalten.",
       "Unsere Erfolgsbilanz umfasst wegweisende Projekte wie die Sir Anthony Hopkins NFT Collection, die zur schnellstverkauften Kollektion auf OpenSea wurde, sowie NFT-Kollaborationen mit Hollywood-Größen wie William Shatner. Darüber hinaus haben wir an Projekten für bekannte TV-Serien wie The Walking Dead und Vampire Diaries gearbeitet und Innovationen im Bereich dynamischer NFT-Spiele vorangetrieben, einschließlich des ersten dynamischen NFT-Spiels auf der SUI-Blockchain in Zusammenarbeit mit MystenLabs. Neben NFTs verfügen wir über umfassende Erfahrung in der Blockchain-Integration für Unity und Unreal Engine und haben sowohl blockchain-basierte als auch traditionelle Spieleentwicklungsprojekte umgesetzt.",
       "Dank dieser umfassenden Expertise kennen wir die Komplexität und die Herausforderungen, denen Nutzer im Web3-Bereich begegnen. Dieses Wissen treibt unsere Mission an, benutzerfreundliche, sichere und innovative Lösungen für dezentrale Finanzsysteme, Bildung und Community-Engagement zu entwickeln. Unser Ziel ist es, die Interaktion mit Blockchain-Technologien grundlegend zu transformieren, indem wir technische Innovationen mit intuitivem Design verbinden.",
-      "Das Techstars Web3 Accelerator Programm bietet die ideale Plattform, um unsere Vision zu skalieren, unsere Lösungen zu verfeinern und uns mit Branchenführern zu vernetzen. Mit der Unterstützung und den Ressourcen von Techstars sind wir überzeugt, einen bedeutenden Beitrag zum Web3-Ökosystem leisten zu können.",
-      "Vielen Dank für die Prüfung unserer Bewerbung. Wir freuen uns auf die Möglichkeit, Teil der Techstars-Community zu werden, und darauf, die Tradition der Innovation weiter voranzutreiben.",
-      
+  
     ],closing: "Mit freundlichen Grüßen, das W3BOTS-Team"
   },
   en: {
@@ -813,9 +811,7 @@ export default function W3BotsPresentation() {
       "We are thrilled to submit our application for the Techstars Web3 Accelerator 2024. As a team with a rich history of delivering cutting-edge Web3 solutions, we are committed to simplifying and securing decentralized finance for users worldwide.",
       "Our proven track record includes pioneering projects like the Sir Anthony Hopkins NFT Collection—which became the fastest collection ever sold on OpenSea—and NFT collaborations for iconic Hollywood figures such as William Shatner. We’ve also delivered projects for hit TV series like The Walking Dead and Vampire Diaries, and spearheaded innovations in dynamic NFT gaming, including the first-ever dynamic NFT game on the SUI blockchain in collaboration with MystenLabs. Beyond NFTs, our team has deep experience in blockchain integration for Web- and dApps, Unity and Unreal Engine and has contributed to both blockchain-powered and traditional game development projects.",
       "With this extensive background, we understand the complexity and challenges users face in the Web3 space. This insight drives our mission to develop user-friendly, secure, and innovative solutions for decentralized finance, education, and community engagement. We aim to transform how people interact with blockchain technology by building tools that bridge technical innovation with intuitive design.",
-      "The Techstars Web3 Accelerator offers the perfect platform to scale our vision, enhance our solutions, and connect with industry leaders. With Techstars’ mentorship and resources, we are confident in our ability to make a meaningful impact in the Web3 ecosystem.",
-      "Thank you for considering our application. We are excited about the opportunity to join the Techstars community and look forward to contributing to its legacy of innovation.",
-      
+   
     ], closing: "Sincerely, the W3BOTS Team"
   }
 };
