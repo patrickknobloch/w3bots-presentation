@@ -244,7 +244,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name, role, description
       <img src={photo} alt={name} className="w-full h-64 object-cover rounded-lg mb-4" />
       <h4 className="font-bold">{name}</h4>
       <Badge className="mt-1 mb-2 ">{role}</Badge>
-      <p className="text-base mt-3 ">{description}</p>
+      <p className="text-base mt-3 opacity-70">{description}</p>
     </CardContent>
   </Card>
 );
@@ -740,17 +740,17 @@ export default function W3BotsPresentation() {
           solutions: [
             {
               icon: CheckCircle,
-              title: "Sicheres Investieren:",
+              title: "Sicheres Investieren",
               description: "Audity: Token-Bewertung und Analyse für fundierte Investitionsentscheidungen. Pooly: Liquiditätslösungen mit einem Ein-Asset-Ansatz für vereinfachte DeFi-Teilnahme."
             },
             {
               icon: CheckCircle,
-              title: "Nahtloses Trading:",
+              title: "Nahtloses Trading",
               description: "Swapy: Optimierte DEX-Aggregation für die besten Handelsrouten. Trady: Automatisierte Trading-Bots für mühelose Portfolioverwaltung."
             },
             {
               icon: CheckCircle,
-              title: "Bildung & Gemeinschaft:",
+              title: "Bildung & Gemeinschaft",
               description: "Academy: KI-gestützte Lernplattform für Blockchain-Expertise. Looty: Gamifizierte Tools zur Förderung der Gemeinschaftsbeteiligung."
             }
           ]
@@ -1011,7 +1011,7 @@ export default function W3BotsPresentation() {
           <CardHeader className='border-none text-center flex flex-col'>
             <CardTitle className="text-5xl md:text-7xl mb-6 font ">{language === 'de' ? "Warum Techstars?" : "Why Techstars?"}</CardTitle>
           </CardHeader>
-          <CardContent className='text-center md:w-2/3 mx-auto'>
+          <CardContent className='text-center md:w-2/3 mx-auto opacity-70'>
             {language === 'de' ? 
             "Der Techstars Web3 Accelerator bietet die ideale Plattform, um unsere Lösungen zu skalieren, unsere Geschäftsmodelle zu verfeinern und wichtige Partnerschaften im Web3-Bereich aufzubauen. Mit der Mentorschaft und den Ressourcen von Techstars wollen wir neu definieren, wie Nutzer mit dezentraler Finanztechnologie interagieren, und ein nachhaltiges, wirkungsvolles Web3-Ökosystem schaffen." 
             : 
