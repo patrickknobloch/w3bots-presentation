@@ -327,7 +327,7 @@ export default function W3BotsPresentation() {
             "Smart Contract Analysis",
             "Wash Trading Detection",
             "Social Media Assessment",
-            "Multichain Support (soon)"
+            "Multichain Support (planned)"
           ],
         description: language === 'de' 
         ? [
@@ -366,7 +366,7 @@ export default function W3BotsPresentation() {
             "DEX Aggregation",
             "Best Price Discovery",
             "Optimized Swap Routes",
-            "Multichain Support (soon)"
+            "Multichain Support (planned)"
           ],
       description: language === 'de' 
         ? [
@@ -401,11 +401,11 @@ export default function W3BotsPresentation() {
             "Community & Produkt Kurse"          
           ]
         : [
-          "Interactive learning modules",
-          "Practical exercises",
-          "Blockchain basics / Free",
-          "DeFi masterclasses / Premium",
-          "Community & product courses"
+          "Interactive Learning Modules",
+          "Practical Exercises",
+          "Blockchain Basics / Free",
+          "DeFi Masterclasses / Premium",
+          "Community & Product Courses"
         ],
       description: language === 'de' 
         ? [
@@ -423,7 +423,7 @@ export default function W3BotsPresentation() {
           ]
         : [
           "remium Courses",
-          "NFT Certifications (soon)",
+          "NFT Certifications (planned)",
           "Product Placement",
           "Corporate Licenses & Whitelabel Solutions"
         ]        
@@ -653,7 +653,7 @@ export default function W3BotsPresentation() {
             "NFT Zertifizierungen (demnächst)",
             "Community-Funktionen",
             "Erweiterte Admin-Funktionen",
-            "Produktplatzierung",
+            "Werbe- & Produktplatzierung",
             "Unternehmenslizenzen/White Label Lösungen"
           ]
         },
@@ -662,7 +662,9 @@ export default function W3BotsPresentation() {
           icon: Repeat,
           items: [
             "Transaktionsgebühren",
-            "Premium-Strategien"
+            "Premium-Strategien",
+            "Erweiterte Automatisierung",
+            "Staking-Gebühren"
           ]
         },
       ]
@@ -685,7 +687,7 @@ export default function W3BotsPresentation() {
             "NFT Certifications (planned)",
             "Community Features",
             "Advanced Admin Features",
-            "Product Placement",
+            "Ad- & Product- Placements",
             "Corporate Licenses/White Label Solutions"
           ]
         },
@@ -694,7 +696,9 @@ export default function W3BotsPresentation() {
           icon: Repeat,
           items: [
             "Transaction Fees",
-            "Premium Strategies"
+            "Premium Strategies",
+            "Advanced Automation",
+            "Staking Fees"
           ]
         }
       ];
@@ -939,7 +943,7 @@ export default function W3BotsPresentation() {
           </div>
         </Section>
         
-        <Section title={language === 'de' ? "Erlösströme" : "Revenue Streams"} subtitle={language === 'de' ? "Strategien für profitables Wachstum" : "Strategies for profitable growth"}>
+        <Section title={language === 'de' ? "Erlösströme" : "Revenue Streams"} subtitle={language === 'de' ? "Möglichkeiten für profitables Wachstum" : "Possibilities for profitable growth"}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {revenueStreams.map((stream) => (
               <RevenueModel key={stream.title} {...stream} />
