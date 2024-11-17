@@ -492,18 +492,16 @@ export default function W3BotsPresentation() {
       color:'blue',
       features: language === 'de' 
         ? [
-            "Vereinfachtes investieren",
             "Einzel-Asset Kauf/Verkauf",
             "Automatische Reinvestition",
             "Risiko-Management",
-            "Performance/Portfolio Verfolgung"
+            "Performance Verfolgung"
           ]
         : [
-            "Simple Invest",
-            "Single Asset buy/sell",
-            "Automatic re-investment",
+            "Single-asset deposits",
+            "Automated reinvestment of rewards",
             "Risk Management",
-            "Performance/Portfolio Tracking",
+            "Performance tracking",
           ],
       description: language === 'de' 
         ? [
@@ -570,16 +568,16 @@ export default function W3BotsPresentation() {
   const team = {
     highlights: language === 'de'
       ? [
-        { text: "Teil von Mint State Labs - Filecoin Techstars Accelerator Seattle 2022 Alumni", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
-        { text: "NFTs für Hollywood: Collections auf ETH für William Shatner, Sir Anthony Hopkins, sowie Filmen/Serien wie The Walking Dead, Vampires Diaries uvm.", link: "https://opensea.io/OrangeComet/created?search%5BsortAscending%5D=false&search%5BsortBy%5D=FLOOR_PRICE" },
-        { text: "Arbeiteten bereits an AAA Gaming Projekten für AMC & Netflix", link: "https://orangecomet.com/#games" },
-        { text: "Bauten das erste dynamische NFT-Spiel auf der SUI Blockchain in Zusammenarbeit mit MystenLabs (ex-DIEM/META)", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
-      ]
+        { text: "Gründungsmitglieder von Mint State Labs, Teil des Filecoin Techstars Accelerator Seattle 2022.", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
+        { text: "Entwicklung von NFTs für Hollywood-Ikonen wie Sir Anthony Hopkins und William Shatner.", link: "https://opensea.io/OrangeComet/created?search%5BsortAscending%5D=false&search%5BsortBy%5D=FLOOR_PRICE" },
+        { text: "Erstellung und Monetarisierung von NFTs für AAA-Gaming-Titel und Franchises, darunter The Walking Dead, Vampire Diaries und Fast & Furious.", link: "https://orangecomet.com/#games" },
+        { text: "Entwicklung und Start des ersten dynamischen NFT-Spiels auf der SUI-Blockchain", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
+      ]      
     : [
-        { text: "Part of Mint State Labs - Filecoin Techstars Accelerator Seattle 2022 Alumni", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
-        { text: "NFTs for Hollywood: Collections on ETH for William Shatner, Sir Anthony Hopkins, as well as movies/series like The Walking Dead, Vampire Diaries, and more...", link: "https://opensea.io/OrangeComet/created?search%5BsortAscending%5D=false&search%5BsortBy%5D=FLOOR_PRICE" },
-        { text: "Worked on AAA gaming projects for AMC & Netflix", link: "https://orangecomet.com/#games" },
-        { text: "Built the first dynamic NFT game on the SUI blockchain in collaboration with MystenLabs (ex-DIEM/META)", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
+        { text: "Founding members of Mint State Labs, part of the Filecoin Techstars Accelerator Seattle 2022.", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
+        { text: "Development of NFTs for Hollywood icons such as Sir Anthony Hopkins and William Shatner.", link: "https://opensea.io/OrangeComet/created?search%5BsortAscending%5D=false&search%5BsortBy%5D=FLOOR_PRICE" },
+        { text: "dCreation and monetization of NFTs for AAA gaming titles and franchises, including The Walking Dead, Vampire Diaries, and Fast & Furious.", link: "https://orangecomet.com/#games" },
+        { text: "Developed and launched the first dynamic NFT game on the SUI blockchain ", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
       ],
     advisors: language === 'de'
       ? [
