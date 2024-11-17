@@ -607,7 +607,7 @@ export default function W3BotsPresentation() {
         {
           name: "Patrick Knobloch",
           role: "Head of Engineering",
-          description: "Fundierte Erfahrung in der Blockchain-, App & Webentwicklung sowie im UI & UX Design.",
+          description: "Umfangreiche Erfahrung in Blockchain-, App- und Webentwicklung, kombiniert mit Expertise im UI/UX-Design, ermöglicht die Entwicklung sicherer, skalierbarer und nutzerzentrierter Web3-Lösungen, die technische Innovation mit intuitiven Benutzererlebnissen verbinden.",
           photo: patrickKnoblochPhoto
         },
         {
@@ -627,7 +627,7 @@ export default function W3BotsPresentation() {
         {
           name: "Patrick Knobloch",
           role: "Head of Engineering",
-          description: "Extensive experience in blockchain, app & web development, as well as in UI & UX design.",
+          description: "Extensive experience in blockchain, app and web development, combined with expertise in UI/UX design, enabling the delivery of secure, scalable, and user-centric Web3 solutions while bridging technical innovation with intuitive user experiences.",
           photo: patrickKnoblochPhoto
         },
         {
