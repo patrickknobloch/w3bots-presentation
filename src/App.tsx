@@ -570,14 +570,14 @@ export default function W3BotsPresentation() {
       ? [
         { text: "Gründungsmitglieder von Mint State Labs, Teil des Filecoin Techstars Accelerator Seattle 2022.", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
         { text: "Entwicklung von NFTs für Hollywood-Ikonen wie Sir Anthony Hopkins und William Shatner.", link: "https://opensea.io/collection/anthony-hopkins-eternal/overview" },
-        { text: "Erstellung und Monetarisierung von NFTs für AAA-Gaming-Titel und Franchises, darunter The Walking Dead, Vampire Diaries und Fast & Furious.", link: "https://orangecomet.com/#games" },
-        { text: "Entwicklung und Start des ersten dynamischen NFT-Spiels auf der SUI-Blockchain", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
+        { text: "Erstellung und Monetarisierung von NFTs sowie Spieleentwicklung für AAA-Gaming-Titel und Franchises, darunter The Walking Dead, Vampire Diaries und Fast & Furious.", link: "https://orangecomet.com/#games" },
+        { text: "Entwicklung und Start des ersten dynamischen NFT-Spiels auf der SUI-Blockchain.", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
       ]      
     : [
         { text: "Founding members of Mint State Labs, part of the Filecoin Techstars Accelerator Seattle 2022.", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
         { text: "Development of NFTs for Hollywood icons such as Sir Anthony Hopkins and William Shatner.", link: "https://opensea.io/collection/anthony-hopkins-eternal/overview" },
-        { text: "Creation and monetization of NFTs for AAA gaming titles and franchises, including The Walking Dead, Vampire Diaries, and Fast & Furious.", link: "https://orangecomet.com/#games" },
-        { text: "Developed and launched the first dynamic NFT game on the SUI blockchain ", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
+        { text: "Creation and monetization of NFTs, and game development for AAA gaming titles and franchises, including The Walking Dead, Vampire Diaries, and Fast & Furious.", link: "https://orangecomet.com/#games" },
+        { text: "Developed and launched the first dynamic NFT game on the SUI blockchain. ", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
       ],
     advisors: language === 'de'
       ? [
@@ -1005,11 +1005,12 @@ export default function W3BotsPresentation() {
           </div>
         </Section>
 
-        <Card className="w-full mb-6 border-none shadow-none p-0 py-3 md:py-6">
+        <Card className=" w-full border-none shadow-none p-3 md:px-6 py-3 md:py-6">
+          <div className=' border border-[#39C463] rounded-xl py-12'>
           <CardHeader className='border-none text-center flex flex-col'>
             <CardTitle className="text-5xl md:text-7xl mb-6 font ">{language === 'de' ? "Warum Techstars?" : "Why Techstars?"}</CardTitle>
           </CardHeader>
-          <CardContent className='text-center md:w-2/3 mx-auto opacity-80 text-base'>
+          <CardContent className='text-center w-full md:w-2/3  mx-auto opacity-80 text-base'>
             {language === 'de' ? 
             "Der Techstars Web3 Accelerator bietet die ideale Plattform, um unsere Lösungen zu skalieren, unsere Geschäftsmodelle zu verfeinern und wichtige Partnerschaften im Web3-Bereich aufzubauen. Mit der Mentorschaft und den Ressourcen von Techstars wollen wir neu definieren, wie Nutzer mit dezentraler Finanztechnologie interagieren, und ein nachhaltiges, wirkungsvolles Web3-Ökosystem schaffen." 
             : 
@@ -1026,6 +1027,7 @@ export default function W3BotsPresentation() {
 
 
           </CardContent>
+          </div>
         </Card>
 
         <div className='w-full'>
@@ -1132,7 +1134,9 @@ export default function W3BotsPresentation() {
               </p>
             </div>
 
-            <div>
+            
+          </div>
+          <div>
             <h4 className="text-xl font-bold ">Socials</h4>
 
             <div className="mt-3 grid space-y-3 text-sm">
@@ -1140,8 +1144,6 @@ export default function W3BotsPresentation() {
               <p><a className="inline-flex gap-x-2 text-neutral-400 hover:text-neutral-600 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" target='_blank' href="https://w3bots.de/blog">Blog</a></p>
             
             </div>
-          </div>
-
           </div>
         </div>
       </footer>
