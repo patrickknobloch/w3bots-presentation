@@ -340,14 +340,14 @@ export default function W3BotsPresentation() {
         ? [
             "API-Nutzung mit Rate-Limits",
             "Premium API-Zugang",
-            "Telegram-Gruppenintegration",
+            "Kanäle/Gruppen Abonnements",
             "Erweiterte Admin-Funktionen"
           ]
         : [
             "API Usage with Rate Limits",
             "Premium API Access",
-            "Telegram Group Integration",
-            "Advanced Admin Features"
+            "Channel/Group-Subscriptions",
+            "Access to Advanced Features"
           ]
     },
     {
@@ -422,10 +422,10 @@ export default function W3BotsPresentation() {
             "Unternehmenslizenzen/White Label Lösungen"
           ]
         : [
-          "Premium courses",
+          "remium Courses",
           "NFT Certifications (soon)",
-          "Product placement",
-          "Corporate licenses/white label solutions"
+          "Product Placement",
+          "Corporate Licenses & Whitelabel Solutions"
         ]        
     },{
       title: "Trady",
@@ -444,10 +444,10 @@ export default function W3BotsPresentation() {
         : [
           "AI-powered trading strategies",
           "Automated trades",
-          "Market analysis",
+          "Market Analysis",
           "Risk management",
-          "Portfolio optimization",
-          "Multichain support (coming soon)"
+          "Portfolio Optimizationn",
+          "Multichain Support (planned)"
         ],
       description: language === 'de' 
         ? [
@@ -483,7 +483,7 @@ export default function W3BotsPresentation() {
             "Performance/Portfolio Verfolgung"
           ]
         : [
-            "Simple invest",
+            "Simple Invest",
             "Single Asset buy/sell",
             "Automatic re-investment",
             "Risk Management",
@@ -498,12 +498,14 @@ export default function W3BotsPresentation() {
           ],
       revenue: language === 'de'
         ? [
-            "Premium-Strategien",
+            "Premium Strategien",
             "Transaktionsgebühren",
+            "Premium API Zugriff"
           ]
         : [
-            "Premium-Strategies",
-            "Transactions fees",
+            "Access to advanced features",
+            "Transactions Fees",
+            "Premium API Access"
           ]
     },{
       title: "Looty",
@@ -518,10 +520,10 @@ export default function W3BotsPresentation() {
           "Multichain-Unterstützung (demnächst)"
         ]
         : [
-          "Interactive reward system",
-          "Dynamic reward tiers",
-          "Telegram channels/groups integration",
-          "Multichain Support (soon)"
+          "Interactive Reward System",
+          "Dynamic Reward Tiers",
+          "Telegram Channel/Group Integration",
+          "Multichain Support (planned)"
       ],
       description: language === 'de' 
         ? [
@@ -538,10 +540,10 @@ export default function W3BotsPresentation() {
             "Transaktionsgebühren"
           ]
           : [
-            "Premium API access",
-            "Task-based advertising",
-            "Whitelabel licenses",
-            "Transaction fees"
+            "Premium API Access",
+            "Task-based Advertising",
+            "Whitelabel Licenses",
+            "Transaction Fees"
           ]
           
       
@@ -680,7 +682,7 @@ export default function W3BotsPresentation() {
           icon: Users,
           items: [
             "Premium Courses",
-            "NFT Certifications (coming soon)",
+            "NFT Certifications (planned)",
             "Community Features",
             "Advanced Admin Features",
             "Product Placement",
