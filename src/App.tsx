@@ -609,17 +609,18 @@ export default function W3BotsPresentation() {
         ,
         members: language === 'de'
     ? [
-        {
-          name: "Patrick Knobloch",
-          role: "COO",
-          description: "Umfangreiche Erfahrung in Blockchain-, App- und Webentwicklung, kombiniert mit Expertise im UI/UX-Design, ermöglicht die Entwicklung sicherer, skalierbarer und nutzerzentrierter Web3-Lösungen, die technische Innovation mit intuitiven Benutzererlebnissen verbinden.",
-          photo: patrickKnoblochPhoto
-        },
+        
         {
           name: "Mike Tsakonas",
           role: "CEO",
           description: "Überwachung der operativen Strategie und Ausführung. Umfangreiche Erfahrung in der Web3-Produktentwicklung, kreativen Content-Produktion und Projektmanagement.",
           photo: mikeTsakonasPhoto
+        },
+        {
+          name: "Patrick Knobloch",
+          role: "COO",
+          description: "Umfangreiche Erfahrung in Blockchain-, App- und Webentwicklung, kombiniert mit Expertise im UI/UX-Design, ermöglicht die Entwicklung sicherer, skalierbarer und nutzerzentrierter Web3-Lösungen, die technische Innovation mit intuitiven Benutzererlebnissen verbinden.",
+          photo: patrickKnoblochPhoto
         },
         {
           name: "Pedro Augusto",
@@ -629,17 +630,18 @@ export default function W3BotsPresentation() {
         }
       ]
     : [
-        {
-          name: "Patrick Knobloch",
-          role: "COO",
-          description: "Extensive experience in blockchain, app and web development, combined with expertise in UI/UX design, enabling the delivery of secure, scalable, and user-centric Web3 solutions while bridging technical innovation with intuitive user experiences.",
-          photo: patrickKnoblochPhoto
-        },
+        
         {
           name: "Mike Tsakonas",
           role: "CEO",
           description: "Overseeing operational strategy and execution. Extensive background in Web3 product development, creative content production, and project management.",
           photo: mikeTsakonasPhoto
+        },
+        {
+          name: "Patrick Knobloch",
+          role: "COO",
+          description: "Extensive experience in blockchain, app and web development, combined with expertise in UI/UX design, enabling the delivery of secure, scalable, and user-centric Web3 solutions while bridging technical innovation with intuitive user experiences.",
+          photo: patrickKnoblochPhoto
         },
         {
           name: "Pedro Augusto",
@@ -738,10 +740,21 @@ export default function W3BotsPresentation() {
           solutions: [
             {
               icon: CheckCircle,
-              title: "Audity:",
-              description: "Token-Bewertung für sicherere Investitionen."
+              title: "Sicheres Investieren:",
+              description: "Audity: Token-Bewertung und Analyse für fundierte Investitionsentscheidungen. Pooly: Liquiditätslösungen mit einem Ein-Asset-Ansatz für vereinfachte DeFi-Teilnahme."
+            },
+            {
+              icon: CheckCircle,
+              title: "Nahtloses Trading:",
+              description: "Swapy: Optimierte DEX-Aggregation für die besten Handelsrouten. Trady: Automatisierte Trading-Bots für mühelose Portfolioverwaltung."
+            },
+            {
+              icon: CheckCircle,
+              title: "Bildung & Gemeinschaft:",
+              description: "Academy: KI-gestützte Lernplattform für Blockchain-Expertise. Looty: Gamifizierte Tools zur Förderung der Gemeinschaftsbeteiligung."
             }
-          ]          
+          ]
+          
         },
         en: {
           problems: [
@@ -764,11 +777,20 @@ export default function W3BotsPresentation() {
           solutions: [
             {
               icon: CheckCircle,
-              title: "Audity:",
-              description: "Token evaluation for safer investments."
+              title: "Secure Investing:",
+              description: "Audity: Token scoring and analytics for informed investment decisions. Pooly: Single-asset liquidity solutions for simplified DeFi participation."
             },
-            
-          ]
+            {
+              icon: CheckCircle,
+              title: "Seamless Trading:",
+              description: "Swapy: Optimized DEX aggregation for the best trading routes. Trady: Automated trading bots for effortless portfolio management."
+            },
+            {
+              icon: CheckCircle,
+              title: "Education & Community:",
+              description: "Academy: AI-driven learning platform for blockchain expertise. Looty: Gamified tools to boost community engagement."
+            }
+          ]          
         }
       };
 
@@ -973,7 +995,7 @@ export default function W3BotsPresentation() {
             </div>
             <div>
               <h3 className="font-bold text-lg mb-4">
-                {language === 'de' ? "Team Mitglieder" : "Team Members"}
+                {language === 'de' ? "Team Mitglieder" : "Who We Are"}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {team.members.map((member) => (
