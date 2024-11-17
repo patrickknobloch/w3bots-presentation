@@ -741,19 +741,20 @@ export default function W3BotsPresentation() {
             {
               icon: CheckCircle,
               title: "Sicheres Investieren",
-              description: "Audity: Token-Bewertung und Analyse für fundierte Investitionsentscheidungen. Pooly: Liquiditätslösungen mit einem Ein-Asset-Ansatz für vereinfachte DeFi-Teilnahme."
+              description: "Audity bietet Token-Bewertung und Analysen, während Pooly die Teilnahme an DeFi mit Liquiditätslösungen für einzelne Assets und Risikomanagement vereinfacht."
             },
             {
               icon: CheckCircle,
               title: "Nahtloses Trading",
-              description: "Swapy: Optimierte DEX-Aggregation für die besten Handelsrouten. Trady: Automatisierte Trading-Bots für mühelose Portfolioverwaltung."
+              description: "Swapy optimiert die DEX-Aggregation für die besten Handelsrouten, und Trady automatisiert das Portfoliomanagement."
             },
             {
               icon: CheckCircle,
               title: "Bildung & Gemeinschaft",
-              description: "Academy: KI-gestützte Lernplattform für Blockchain-Expertise. Looty: Gamifizierte Tools zur Förderung der Gemeinschaftsbeteiligung."
+              description: "Academy bietet KI-gestütztes Blockchain-Lernen, und Looty bindet die Gemeinschaft durch gamifizierte Tools ein."
             }
           ]
+          
           
         },
         en: {
@@ -778,17 +779,17 @@ export default function W3BotsPresentation() {
             {
               icon: CheckCircle,
               title: "Secure Investing",
-              description: "Audity: Token scoring and analytics for informed investment decisions. Pooly: Single-asset liquidity solutions for simplified DeFi participation."
+              description: "Audity offers token scoring and analytics, while Pooly simplifies DeFi participation with single-asset liquidity solutions and risk management."
             },
             {
               icon: CheckCircle,
               title: "Seamless Trading",
-              description: "Swapy: Optimized DEX aggregation for the best trading routes. Trady: Automated trading bots for effortless portfolio management."
+              description: "Swapy optimizes DEX aggregation for the best trading routes, and Trady automates portfolio management."
             },
             {
               icon: CheckCircle,
               title: "Education & Community",
-              description: "Academy: AI-driven learning platform for blockchain expertise. Looty: Gamified tools to boost community engagement."
+              description: "Academy provides AI-driven blockchain learning, and Looty engages the community with gamified tools."
             }
           ]          
         }
@@ -957,7 +958,7 @@ export default function W3BotsPresentation() {
           </Tabs>
         </Section>
 
-        <Section title={language === 'de' ? "Produkte, Funktionen und Geschäftsmodelle" : "Products, Features, and Business Models"} subtitle={language === 'de' ? "Mehrwert schaffen durch innovative Lösungen" : "Creating value through innovative solutions"}>
+        <Section title={language === 'de' ? "Unsere Produkte und Einnahmemodelle" : "Our Products and Revenue Models"} subtitle={language === 'de' ? "Mehrwert schaffen durch innovative Lösungen" : "Creating value through innovative solutions"}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {products.map((product) => (
               <ProductCard key={product.title} {...product} />
