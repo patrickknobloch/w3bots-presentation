@@ -622,7 +622,7 @@ export default function W3BotsPresentation() {
       {
         name: "Pedro Augusto",
         role: "CTO",
-        description: "Leitet die Entwicklung robuster Infrastrukturen und Anwendungen. Experte in Blockchain-Technologie, Spieleentwicklung und Webplattformen, liefert skalierbare und effiziente Lösungen, die auf die sich wandelnde Web3-Landschaft zugeschnitten sind.",
+        description: "Leitet die Entwicklung robuster Infrastrukturen und Anwendungen. Experte für Blockchain-Technologie, Spieleentwicklung und Webplattformen, mit umfangreicher Erfahrung im Aufbau von KI-Modellen sowie in der Entwicklung und Schulung intelligenter Agenten, um fortschrittliche und anpassungsfähige Lösungen für die sich entwickelnde Web3-Landschaft bereitzustellen.",
         photo: pedroAugsutoPhoto
       }      
       ]
@@ -643,7 +643,7 @@ export default function W3BotsPresentation() {
         {
           name: "Pedro Augusto",
           role: "CTO",
-          description: "Heading the development of robust infrastructure and applications. Expert in blockchain technology, game development, and web platforms, delivering scalable and efficient solutions tailored to the evolving Web3 landscape.",
+          description: "Leads the development of robust infrastructures and applications. An expert in blockchain technology, game development, and web platforms, with extensive experience in building AI models and developing and training intelligent agents to deliver advanced and adaptive solutions for the evolving Web3 landscape.",
           photo: pedroAugsutoPhoto
         }
       ]
