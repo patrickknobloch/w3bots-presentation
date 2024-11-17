@@ -192,7 +192,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, status, image,button, 
         </Badge>
       ) ? (
       <a href='https://audity.w3bots.de' target='_blank'>
-        <button className='bg-green-300 font-medium text-neutral-900 px-3 py-1 rounded-lg'>Test</button>
+        <button className='bg-green-300 font-medium text-neutral-900 px-3 py-1 rounded-lg'>Test Audity</button>
       </a>) : (
         <Badge>
           {status}
