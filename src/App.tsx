@@ -723,72 +723,53 @@ export default function W3BotsPresentation() {
           problems: [
             {
               icon: XOctagon,
-              title: "Komplexität der DeFi-Interaktionen",
-              description: "Nutzer müssen viele Plattformen und Tools verstehen und verwalten, was zu Fehlern und Verlusten führen kann."
+              title: "Komplexität bei DeFi-Interaktionen",
+              description: "Nutzer müssen sich durch mehrere Plattformen und Tools navigieren, was oft zu Verwirrung und Fehlern führt."
             },
             {
               icon: XOctagon,
-              title: "Mangelnde Sicherheit",
-              description: "Unzureichende Prüfung von Smart Contracts und Token führt zu Scams und finanziellen Verlusten."
+              title: "Unzureichende Sicherheit",
+              description: "Schwachstellen in der Überprüfung von Smart Contracts und Tokens setzen Nutzer Betrugsrisiken aus."
             },
             {
               icon: XOctagon,
               title: "Hohe Einstiegshürden",
-              description: "Technische Komplexität und fehlendes Verständnis halten viele potenzielle Nutzer von Web3 fern."
+              description: "Die technische Lernkurve schreckt viele Neulinge davon ab, Web3-Lösungen zu nutzen."
             }
           ],
           solutions: [
             {
               icon: CheckCircle,
-              title: "All-in-One DeFi Suite",
-              description: "Integration aller wichtigen DeFi-Funktionen in einer benutzerfreundlichen Plattform mit Fokus auf Sicherheit und Effizienz."
-            },
-            {
-              icon: CheckCircle,
-              title: "Automatisierte Sicherheitsprüfungen",
-              description: "KI-gestützte Analyse von Smart Contracts und Token-Metriken für maximale Sicherheit der Nutzer."
-            },
-            {
-              icon: CheckCircle,
-              title: "Bildung & Vereinfachung",
-              description: "Integrierte Lernplattform und vereinfachte Benutzeroberflächen für einen leichteren Einstieg in Web3."
+              title: "Audity:",
+              description: "Token-Bewertung für sicherere Investitionen."
             }
-          ]
+          ]          
         },
         en: {
           problems: [
             {
               icon: XOctagon,
-              title: "DeFi Interaction Complexity",
-              description: "Users need to understand and manage multiple platforms and tools, leading to errors and losses."
+              title: "Complexity in DeFi Interactions",
+              description: "Users must navigate multiple platforms and tools, often leading to confusion and mistakes."
             },
             {
               icon: XOctagon,
               title: "Insufficient Security",
-              description: "Inadequate verification of smart contracts and tokens results in scams and financial losses."
+              description: "Vulnerabilities in smart contract and token verification expose users to fraud."
             },
             {
               icon: XOctagon,
-              title: "High Entry Barriers",
-              description: "Technical complexity and lack of understanding keep many potential users away from Web3."
+              title: "High Barriers to Entry",
+              description: "The technical learning curve deters many newcomers from utilizing Web3 solutions."
             }
           ],
           solutions: [
             {
               icon: CheckCircle,
-              title: "All-in-One DeFi Suite",
-              description: "Integration of all key DeFi functions in a user-friendly platform focused on security and efficiency."
+              title: "Audity:",
+              description: "Token evaluation for safer investments."
             },
-            {
-              icon: CheckCircle,
-              title: "Automated Security Checks",
-              description: "AI-powered analysis of smart contracts and token metrics for maximum user security."
-            },
-            {
-              icon: CheckCircle,
-              title: "Education & Simplification",
-              description: "Integrated learning platform and simplified user interfaces for easier Web3 adoption."
-            }
+            
           ]
         }
       };
@@ -933,7 +914,7 @@ export default function W3BotsPresentation() {
 
         <CoverLetterCard language={language} />
 
-        <Section title={language === 'de' ? "Problem & Lösung" : "Problem & Solution"} subtitle={language === 'de' ? "Nutzer verstehen & Prozesse vereinfachen" : "Understanding users & simplifying processes"}>
+        <Section title={language === 'de' ? "Problem & Lösung" : "Problem & Solution"} subtitle={language === 'de' ? "Web3 verstehen und vereinfachen" : "Understanding and Simplifying Web3"}>
           <Tabs defaultValue="problem" className="w-full">
             <TabsList className="grid w-full grid-cols-2 bg-neutral-100/10 border border-neutral-200 dark:text-white rounded-xl dark:bg-neutral-800/10 dark:border-neutral-800">
               <TabsTrigger value="problem">
@@ -956,7 +937,7 @@ export default function W3BotsPresentation() {
           </Tabs>
         </Section>
 
-        <Section title={language === 'de' ? "Produkte" : "Products"} subtitle={language === 'de' ? "Mehrwert schaffen durch innovative Lösungen" : "Creating value through innovative solutions"}>
+        <Section title={language === 'de' ? "Produkte, Funktionen und Geschäftsmodelle" : "Products, Features, and Business Models"} subtitle={language === 'de' ? "Mehrwert schaffen durch innovative Lösungen" : "Creating value through innovative solutions"}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {products.map((product) => (
               <ProductCard key={product.title} {...product} />
