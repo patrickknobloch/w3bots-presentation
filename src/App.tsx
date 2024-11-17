@@ -457,7 +457,7 @@ export default function W3BotsPresentation() {
             "Multichain Unterstützung (demnächst)"
           ]
         : [
-          "AI-powered Trading sStrategies",
+          "AI-Powered Trading Strategies",
           "Automated Trades",
           "Market Analysis",
           "Risk anagement",
@@ -501,7 +501,7 @@ export default function W3BotsPresentation() {
             "Single-Asset Deposits",
             "Automated Reinvestment of Rewards",
             "Risk Management",
-            "Performance tracking",
+            "Performance Tracking",
           ],
       description: language === 'de' 
         ? [
@@ -932,7 +932,7 @@ export default function W3BotsPresentation() {
 
         <CoverLetterCard language={language} />
 
-        <Section title={language === 'de' ? "Problem & Lösung" : "Problem & Solution"} subtitle={language === 'de' ? "Web3 verstehen und vereinfachen" : "Understanding and Simplifying Web3"}>
+        <Section title={language === 'de' ? "Problem & Lösung" : "Problem & Solution"} subtitle={language === 'de' ? "Web3 verstehen und vereinfachen" : "Understanding And Simplifying Web3"}>
           <Tabs defaultValue="problem" className="w-full">
             <TabsList className="grid w-full grid-cols-2 bg-neutral-100/10 border border-neutral-200 dark:text-white rounded-xl dark:bg-neutral-800/10 dark:border-neutral-800">
               <TabsTrigger value="problem">
@@ -955,7 +955,7 @@ export default function W3BotsPresentation() {
           </Tabs>
         </Section>
 
-        <Section title={language === 'de' ? "Unsere Produkte und Einnahmemodelle" : "Our Products and Revenue Models"} subtitle={language === 'de' ? "Mehrwert schaffen durch innovative Lösungen" : "Creating value through innovative solutions"}>
+        <Section title={language === 'de' ? "Unsere Produkte und Einnahmemodelle" : "Our Products and Revenue Models"} subtitle={language === 'de' ? "Mehrwert schaffen durch innovative Lösungen" : "Creating Value Through Innovative Solutions"}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {products.map((product) => (
               <ProductCard key={product.title} {...product} />
@@ -971,7 +971,7 @@ export default function W3BotsPresentation() {
           </div>
         </Section>
 
-        <Section title={language === 'de' ? "Team & Expertise" : "Team & Expertise"} subtitle={language === 'de' ? "Vereint durch Vision - gestärkt durch Expertise" : "United by vision - empowered by expertise"}>
+        <Section title={language === 'de' ? "Team & Expertise" : "Team & Expertise"} subtitle={language === 'de' ? "Grenzen mit Code verschieben" : "Pushing Boundaries with Code"}>
           <div className="space-y-6 p-3">
           <div>
               <h3 className="font-bold text-lg mb-4">
