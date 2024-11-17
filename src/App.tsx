@@ -457,10 +457,10 @@ export default function W3BotsPresentation() {
             "Multichain Unterstützung (demnächst)"
           ]
         : [
-          "AI-powered trading strategies",
-          "Automated trades",
+          "AI-powered Trading sStrategies",
+          "Automated Trades",
           "Market Analysis",
-          "Risk management",
+          "Risk anagement",
           "Portfolio Optimizationn",
           "Multichain Support (planned)"
         ],
@@ -478,9 +478,9 @@ export default function W3BotsPresentation() {
             "Erweiterte Funktionen"
           ]
         : [
-          "Transaction fees",
-          "Premium strategies",
-          "Advanced features"
+          "Transaction Fees",
+          "Premium Strategies",
+          "Advanced Features"
         ]
         
     },
@@ -498,8 +498,8 @@ export default function W3BotsPresentation() {
             "Performance Verfolgung"
           ]
         : [
-            "Single-asset deposits",
-            "Automated reinvestment of rewards",
+            "Single-Asset Deposits",
+            "Automated Reinvestment of Rewards",
             "Risk Management",
             "Performance tracking",
           ],
@@ -517,7 +517,7 @@ export default function W3BotsPresentation() {
             "Premium API Zugriff"
           ]
         : [
-            "Access to advanced features",
+            "Access to Advanced Features",
             "Transactions Fees",
             "Premium API Access"
           ]
@@ -569,14 +569,14 @@ export default function W3BotsPresentation() {
     highlights: language === 'de'
       ? [
         { text: "Gründungsmitglieder von Mint State Labs, Teil des Filecoin Techstars Accelerator Seattle 2022.", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
-        { text: "Entwicklung von NFTs für Hollywood-Ikonen wie Sir Anthony Hopkins und William Shatner.", link: "https://opensea.io/OrangeComet/created?search%5BsortAscending%5D=false&search%5BsortBy%5D=FLOOR_PRICE" },
+        { text: "Entwicklung von NFTs für Hollywood-Ikonen wie Sir Anthony Hopkins und William Shatner.", link: "https://opensea.io/collection/anthony-hopkins-eternal/overview" },
         { text: "Erstellung und Monetarisierung von NFTs für AAA-Gaming-Titel und Franchises, darunter The Walking Dead, Vampire Diaries und Fast & Furious.", link: "https://orangecomet.com/#games" },
         { text: "Entwicklung und Start des ersten dynamischen NFT-Spiels auf der SUI-Blockchain", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
       ]      
     : [
         { text: "Founding members of Mint State Labs, part of the Filecoin Techstars Accelerator Seattle 2022.", link: "https://www.crunchbase.com/acquisition/orange-comet-inc-acquires-mint-state-labs--69dec227" },
-        { text: "Development of NFTs for Hollywood icons such as Sir Anthony Hopkins and William Shatner.", link: "https://opensea.io/OrangeComet/created?search%5BsortAscending%5D=false&search%5BsortBy%5D=FLOOR_PRICE" },
-        { text: "dCreation and monetization of NFTs for AAA gaming titles and franchises, including The Walking Dead, Vampire Diaries, and Fast & Furious.", link: "https://orangecomet.com/#games" },
+        { text: "Development of NFTs for Hollywood icons such as Sir Anthony Hopkins and William Shatner.", link: "https://opensea.io/collection/anthony-hopkins-eternal/overview" },
+        { text: "Creation and monetization of NFTs for AAA gaming titles and franchises, including The Walking Dead, Vampire Diaries, and Fast & Furious.", link: "https://orangecomet.com/#games" },
         { text: "Developed and launched the first dynamic NFT game on the SUI blockchain ", link: "https://www.youtube.com/watch?v=ACHHrjCibiI" },
       ],
     advisors: language === 'de'
@@ -1114,20 +1114,10 @@ export default function W3BotsPresentation() {
           </div>
 
           <div>
-            <h4 className="text-xl font-bold ">Product</h4>
-
-            <div className="mt-3 grid space-y-3 text-sm">
-              <p><a className="inline-flex gap-x-2 text-neutral-400 hover:text-neutral-600 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="/docs">Docs</a></p>
-            </div>
-          </div>
-
-
-          <div>
             <h4 className="text-xl font-bold ">Resources</h4>
 
             <div className="mt-3 grid space-y-3 text-sm">
-              <p><a className="inline-flex gap-x-2 text-neutral-400 hover:text-neutral-600 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="t.me/w3bots_community">Community</a></p>
-              <p><a className="inline-flex gap-x-2 text-neutral-400 hover:text-neutral-600 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="/blog">Blog</a></p>
+              <p><a className="inline-flex gap-x-2 text-neutral-400 hover:text-neutral-600 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" target='_blank' href="https://w3bots.de/docs">Docs</a></p>
             </div>
           </div>
 
@@ -1135,8 +1125,22 @@ export default function W3BotsPresentation() {
             <h4 className="text-xl font-bold ">Developers</h4>
 
             <div className="mt-3 grid space-y-3 text-sm">
-              <p><a className="inline-flex gap-x-2 text-neutral-400 hover:text-neutral-600 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">API (soon)</a></p>
+              <p>
+                <a href='https://w3bots.de' className="inline-flex gap-x-2 text-neutral-400 hover:text-neutral-600 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200">
+                  API (soon)
+                </a>
+              </p>
             </div>
+
+            <div>
+            <h4 className="text-xl font-bold ">Socials</h4>
+
+            <div className="mt-3 grid space-y-3 text-sm">
+              <p><a className="inline-flex gap-x-2 text-neutral-400 hover:text-neutral-600 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" target='_blank' href="https://t.me/w3bots_community">Community</a></p>
+              <p><a className="inline-flex gap-x-2 text-neutral-400 hover:text-neutral-600 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" target='_blank' href="https://w3bots.de/blog">Blog</a></p>
+            
+            </div>
+          </div>
 
           </div>
         </div>
