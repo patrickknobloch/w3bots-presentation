@@ -786,7 +786,7 @@ export default function W3BotsPresentation() {
             {
               icon: CheckCircle,
               title: "Education & Community",
-              description: "Academy provides AI-driven blockchain learning, and Looty engages the community with gamified tools."
+              description: "Academy provides AI-driven interactive blockchain learning, and Looty engages the community with gamified tools."
             }
           ]          
         }
