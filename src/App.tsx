@@ -748,7 +748,7 @@ export default function W3BotsPresentation() {
             {
               icon: CheckCircle,
               title: "Bildung & Gemeinschaft",
-              description: "Academy bietet KI-gestütztes Blockchain-Lernen, und Looty bindet die Gemeinschaft durch gamifizierte Tools ein."
+              description: "Academy bietet interaktives KI-gestütztes Blockchain-Lernen, und Looty bindet die Gemeinschaft durch gamifizierte Tools ein."
             }
           ]
           
