@@ -143,6 +143,7 @@ const RevenueModel: React.FC<RevenueModelProps> = ({ title, items, icon: Icon })
 
 interface ProductCardProps {
   title: string;
+  button: string;
   description: string[];
   status: string;
   color: string; 
@@ -151,7 +152,7 @@ interface ProductCardProps {
   revenue: string[];
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ title, status, image, color, features,description, revenue }) => (
+const ProductCard: React.FC<ProductCardProps> = ({ title, status, image,button, color, features,description, revenue }) => (
   <div className="group flex flex-col h-full bg-neutral-100/10 border border-neutral-200 dark:text-white rounded-xl dark:bg-neutral-800/10 dark:border-neutral-800">
     <div className={`h-52 flex flex-col justify-center items-center bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] rounded-t-xl ${
       color === 'yellow' ? 'from-yellow-500/10 to-yellow-700/0' :
@@ -177,15 +178,20 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, status, image, color, 
       <CardTitle className="text-2xl font-bold flex items-center gap-2 p-3 pb-0">
         {title}
       </CardTitle>
-      <Badge variant={
-        status.includes("fertig") || status.includes("complete") 
-          ? "success"
-          : status.includes("Test") || status.includes("Geplant") || status.includes("Planned")
-          ? "warning"
-          : "secondary"
-      }>
-        {status}
-      </Badge>
+
+      {button !== "" && (
+        <Badge>
+          {status}
+        </Badge>
+      ) ? (
+      <a href='https://audity.w3bots.de' target='_blank'>
+        <button className='bg-green-300 font-medium text-neutral-900 px-3 py-1 rounded-lg'>Test</button>
+      </a>) : (
+        <Badge>
+          {status}
+        </Badge>
+      )}
+
     </CardHeader>
     <CardContent>
       <div className="space-y-4 p-3">
@@ -311,6 +317,7 @@ export default function W3BotsPresentation() {
       title: "Audity",
       status: language === 'de' ? "In der Testphase" : "In Testing",
       image: audityLogo,
+      button: "https://audity.w3bots.de/",
       color:'green',
       features: language === 'de' 
         ? [
@@ -355,6 +362,7 @@ export default function W3BotsPresentation() {
       status: language === 'de' ? "In der Testphase" : "In Testing",
       image: swapyLogo,
       color:'cyan',
+      button: "",
       features: language === 'de' 
         ? [
             "DEX Aggregation",
@@ -391,6 +399,7 @@ export default function W3BotsPresentation() {
       title: "Academy",
       status: language === 'de' ? "In der Entwicklung" : "In Development",
       image: academyLogo,
+      button: "",
       color:'yellow',
       features: language === 'de' 
         ? [
@@ -432,6 +441,7 @@ export default function W3BotsPresentation() {
       status: language === 'de' ? "Noch nicht begonnen" : "Not started yet",
       image: tradyLogo,
       color:'indigo',
+      button: "",
       features: language === 'de' 
         ? [
             "KI-gestützte Trading-Strategien",
@@ -473,6 +483,7 @@ export default function W3BotsPresentation() {
       title: "Pooly",
       status: language === 'de' ? "In der Entwicklung" : "In Development",
       image: poolyLogo,
+      button: "",
       color:'blue',
       features: language === 'de' 
         ? [
@@ -512,6 +523,7 @@ export default function W3BotsPresentation() {
       status: language === 'de' ? "Noch nicht begonnen" : "Not started yet",
       image: lootyLogo,
       color:'red',
+      button: "",
       features: language === 'de' 
         ?[
           "Interaktives Belohnungssystem",
