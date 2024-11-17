@@ -777,17 +777,17 @@ export default function W3BotsPresentation() {
           solutions: [
             {
               icon: CheckCircle,
-              title: "Secure Investing:",
+              title: "Secure Investing",
               description: "Audity: Token scoring and analytics for informed investment decisions. Pooly: Single-asset liquidity solutions for simplified DeFi participation."
             },
             {
               icon: CheckCircle,
-              title: "Seamless Trading:",
+              title: "Seamless Trading",
               description: "Swapy: Optimized DEX aggregation for the best trading routes. Trady: Automated trading bots for effortless portfolio management."
             },
             {
               icon: CheckCircle,
-              title: "Education & Community:",
+              title: "Education & Community",
               description: "Academy: AI-driven learning platform for blockchain expertise. Looty: Gamified tools to boost community engagement."
             }
           ]          
