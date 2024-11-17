@@ -136,7 +136,7 @@ const RevenueModel: React.FC<RevenueModelProps> = ({ title, items, icon: Icon })
             <li key={index} className="flex items-center gap-2 text-base">
               <ChevronRight className="w-4 h-4 text-neutral-500" />
               <div>
-                <strong>{boldPart}:</strong>
+                <strong>{boldPart}:</strong><br></br>
                 {regularPart && <span className='opacity-70'> {regularPart}</span>}
               </div>
             </li>
@@ -305,9 +305,7 @@ export default function W3BotsPresentation() {
       <Card className='p-6 dark:bg-neutral-800/30 py-6 shadow-none'>
         <CardContent className="pt-3">
           <h4 className="font-bold text-2xl mb-4">{letter.title}</h4>
-        
-          <p className="mb-4 text-base opacity-80 ">{letter.introduction}</p>
-          {letter.content.map((paragraph, index) => (
+            {letter.content.map((paragraph, index) => (
             <p key={index} className="mb-4  text-base opacity-80 ">{paragraph}</p>
           ))}
           <p className="font-semibold  text-base opacity-80 ">{letter.closing}</p>
@@ -777,8 +775,8 @@ export default function W3BotsPresentation() {
 
   const coverLetter = {
   de: {
-    title: "Anschreiben",
-    introduction: "Sehr geehrtes Techstars-Team,",
+    title: "Sehr geehrtes Techstars-Team,",
+    introduction: "",
     content: [
       "mit großer Begeisterung reichen wir unsere Bewerbung für das Techstars Web3 Accelerator Programm 2024 ein. Als ein Team mit einer langen Historie an bahnbrechenden Web3-Lösungen setzen wir uns dafür ein, dezentralisierte Finanzsysteme zu vereinfachen und für Nutzer weltweit sicherer zu gestalten.",
       "Unsere Erfolgsbilanz umfasst wegweisende Projekte wie die Sir Anthony Hopkins NFT Collection, die zur schnellstverkauften Kollektion auf OpenSea wurde, sowie NFT-Kollaborationen mit Hollywood-Größen wie William Shatner. Darüber hinaus haben wir an Projekten für bekannte TV-Serien wie The Walking Dead und Vampire Diaries gearbeitet und Innovationen im Bereich dynamischer NFT-Spiele vorangetrieben, einschließlich des ersten dynamischen NFT-Spiels auf der SUI-Blockchain in Zusammenarbeit mit MystenLabs. Neben NFTs verfügen wir über umfassende Erfahrung in der Blockchain-Integration für Unity und Unreal Engine und haben sowohl blockchain-basierte als auch traditionelle Spieleentwicklungsprojekte umgesetzt.",
@@ -789,8 +787,8 @@ export default function W3BotsPresentation() {
     ],closing: ""
   },
   en: {
-    title: "Cover Letter",
-    introduction: "Dear Techstars Team,",
+    title: "Dear Techstars Team,",
+    introduction: "",
     content: [
       "We are thrilled to submit our application for the Techstars Web3 Accelerator 2024. As a team with a rich history of delivering cutting-edge Web3 solutions, we are committed to simplifying and securing decentralized finance for users worldwide.",
       "Our proven track record includes pioneering projects like the Sir Anthony Hopkins NFT Collection—which became the fastest collection ever sold on OpenSea—and NFT collaborations for iconic Hollywood figures such as William Shatner. We’ve also delivered projects for hit TV series like The Walking Dead and Vampire Diaries, and spearheaded innovations in dynamic NFT gaming, including the first-ever dynamic NFT game on the SUI blockchain in collaboration with MystenLabs. Beyond NFTs, our team has deep experience in blockchain integration for Unity and Unreal Engine and has contributed to both blockchain-powered and traditional game development projects.",
@@ -989,9 +987,9 @@ export default function W3BotsPresentation() {
 
         <Card className="w-full mb-6 border-none shadow-none p-0 py-3 md:py-6">
           <CardHeader className='border-none text-center flex flex-col'>
-            <CardTitle className="text-5xl md:text-7xl mb-12 font ">{language === 'de' ? "Warum Techstars?" : "Why Techstars?"}</CardTitle>
+            <CardTitle className="text-5xl md:text-7xl mb-6 font ">{language === 'de' ? "Warum Techstars?" : "Why Techstars?"}</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className='text-center md:w-2/3 mx-auto'>
             {language === 'de' ? 
             "Der Techstars Web3 Accelerator bietet die ideale Plattform, um unsere Lösungen zu skalieren, unsere Geschäftsmodelle zu verfeinern und wichtige Partnerschaften im Web3-Bereich aufzubauen. Mit der Mentorschaft und den Ressourcen von Techstars wollen wir neu definieren, wie Nutzer mit dezentraler Finanztechnologie interagieren, und ein nachhaltiges, wirkungsvolles Web3-Ökosystem schaffen." 
             : 
