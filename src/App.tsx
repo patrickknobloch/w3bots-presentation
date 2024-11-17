@@ -436,7 +436,7 @@ export default function W3BotsPresentation() {
             "Unternehmenslizenzen/White Label Lösungen"
           ]
         : [
-          "remium Courses",
+          "Premium Courses",
           "NFT Certifications (planned)",
           "Product Placement",
           "Corporate Licenses & Whitelabel Solutions"
