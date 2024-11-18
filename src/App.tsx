@@ -809,7 +809,7 @@ export default function W3BotsPresentation() {
     introduction: "",
     content: [
       "We are thrilled to submit our application for the Techstars Web3 Accelerator 2024. As a team with a rich history of delivering cutting-edge Web3 solutions, we are committed to simplifying and securing decentralized finance for users worldwide.",
-      "Our proven track record includes pioneering projects like the Sir Anthony Hopkins NFT Collection—which became the fastest collection ever sold on OpenSea—and NFT collaborations for iconic Hollywood figures such as William Shatner. We’ve also delivered projects for hit TV series like The Walking Dead and Vampire Diaries, and spearheaded innovations in dynamic NFT gaming, including the first-ever dynamic NFT game on the SUI blockchain in collaboration with MystenLabs. Beyond NFTs, our team has deep experience in blockchain integration for Web- and dApps, Unity and Unreal Engine and has contributed to both blockchain-powered and traditional game development projects.",
+      "Our proven track record includes pioneering projects like the Sir Anthony Hopkins NFT Collection which became the fastest collection ever sold on OpenSea and NFT collaborations for iconic Hollywood figures such as William Shatner. We’ve also delivered projects for hit TV series like The Walking Dead and Vampire Diaries, and spearheaded innovations in dynamic NFT gaming, including the first-ever dynamic NFT game on the SUI blockchain in collaboration with MystenLabs. Beyond NFTs, our team has deep experience in blockchain integration for Web- and dApps, Unity and Unreal Engine and has contributed to both blockchain-powered and traditional game development projects.",
       "With this extensive background, we understand the complexity and challenges users face in the Web3 space. This insight drives our mission to develop user-friendly, secure, and innovative solutions for decentralized finance, education, and community engagement. We aim to transform how people interact with blockchain technology by building tools that bridge technical innovation with intuitive design.",
    
     ], closing: "Sincerely, the W3BOTS Team"
@@ -819,19 +819,18 @@ export default function W3BotsPresentation() {
 
   return (
     <ScrollArea className="h-full p-3 md:p-6 pb-6 bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white">
-      <a target="_blank" href='https://w3bots.de/'>
-      <svg
-        className="absolute inset-0 opacity-5 z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-        aria-hidden="true">
-        <defs>
-          <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1"
-            patternUnits="userSpaceOnUse">
-            <path d="M.5 200V.5H200" fill="none"></path>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"></rect>
-      </svg>
-      </a>
+        <svg
+          className="absolute inset-0 opacity-5 z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+          aria-hidden="true">
+          <defs>
+            <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1"
+              patternUnits="userSpaceOnUse">
+              <path d="M.5 200V.5H200" fill="none"></path>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"></rect>
+        </svg>
+  
 
       <div className="w-full max-w-7xl mx-auto space-y-8 relative z-50">
         <LanguageToggle language={language} setLanguage={setLanguage} />
@@ -1036,6 +1035,7 @@ export default function W3BotsPresentation() {
       <footer className=" mt-auto w-full max-w-[85rem] py-10 px-8 sm:px-6 lg:px-8 mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 mb-10">
           <div className="col-span-full lg:col-span-1 lg:block items-center mt-2">
+            <a target='_blank' href='https://w3bots.de'>
           <svg className='w-full pr-8 dark:fill-white fill-neutral-900' viewBox="0 0 4346 1023" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1446_118)">
           
@@ -1108,7 +1108,7 @@ export default function W3BotsPresentation() {
             </clipPath>
             </defs>
           </svg>
-
+          </a>
           </div>
 
           <div>
