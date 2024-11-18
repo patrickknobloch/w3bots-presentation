@@ -460,7 +460,7 @@ export default function W3BotsPresentation() {
           "AI-Powered Trading Strategies",
           "Automated Trades",
           "Market Analysis",
-          "Risk anagement",
+          "Risk Management",
           "Portfolio Optimizationn",
           "Multichain Support (planned)"
         ],
