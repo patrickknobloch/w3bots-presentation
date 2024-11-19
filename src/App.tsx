@@ -21,6 +21,8 @@ import poolyLogo from './lib/assets/poolylogo.svg';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './lib/components/ShadeTabs';
 
+import { Analytics } from "@vercel/analytics/react"
+
 interface FeaturesRevenueProps {
   features: string[];
   revenue: string[];
@@ -1033,6 +1035,7 @@ export default function W3BotsPresentation() {
       </div>
 
       <footer className=" mt-auto w-full max-w-[85rem] py-10 px-8 sm:px-6 lg:px-8 mx-auto">
+      <Analytics/>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 mb-10">
           <div className="col-span-full lg:col-span-1 lg:block items-center mt-2">
             <a target='_blank' href='https://w3bots.de'>
